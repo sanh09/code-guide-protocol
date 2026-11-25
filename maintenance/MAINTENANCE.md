@@ -7,12 +7,12 @@
 | 저장소 | 스킬 | 사실 파일 |
 |---|---|---|
 | sanh09/code-guide-protocol | `cc-basics-ko`, `cc-intermediate-ko`, `cc-advanced-ko` | `plugins/<스킬>/skills/<스킬>/references/facts.md` |
-| sanh09/guide-protocol | `cc-basics-ko-app`, `cc-intermediate-ko-app`, `cc-advanced-ko-app`, `ai-chat-guide-ko` | `skills/<스킬>/references/facts.md` |
-| sanh09/app-guide-plugin | `ai-chat-guide-ko` | `plugins/ai-chat-guide-ko/skills/ai-chat-guide-ko/references/facts.md` |
+| sanh09/guide-protocol | `cc-basics-ko-app`, `cc-intermediate-ko-app`, `cc-advanced-ko-app` | `skills/<스킬>/references/facts.md` |
+| sanh09/app-guide-plugin | `ai-chat-guide-ko` (이 저장소에서만 관리) | `plugins/ai-chat-guide-ko/skills/ai-chat-guide-ko/references/facts.md` |
 
 짝을 이루는 파일은 같은 사실을 담아야 한다.
 - `cc-X-ko`(code-guide-protocol) ↔ `cc-X-ko-app`(guide-protocol)의 `facts.md`와 `curriculum.md`. 단, 앱 버전 curriculum에서는 학습 기록 파일(`cc-tutor-progress.md`) 관련 문장을 뺐다. 그 차이는 유지한다.
-- `ai-chat-guide-ko`(guide-protocol) ↔ `ai-chat-guide-ko`(app-guide-plugin)은 완전히 같은 파일이다.
+- `ai-chat-guide-ko`는 app-guide-plugin에만 있다. 짝이 되는 파일이 없다.
 
 ## 1. 상태 확인
 

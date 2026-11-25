@@ -2,6 +2,12 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-25 (저장소 정리)
+- `ai-chat-guide-ko`를 guide-protocol에서 빼고 app-guide-plugin에서만 관리. guide-protocol README에는 링크를 남김.
+- `ai-chat-guide-ko` 프로젝트 사실 수정: Free를 포함한 모든 사용자가 사용, Free는 최대 5개. 프로젝트 지침의 '(유료)' 표기를 '요금제에 따라 다를 수 있음'으로 바꿈. 버전 0.3.1.
+- plugin.json keywords의 `korean`을 `multilingual`로 바꿈. README 업데이트 내역에 다국어 항목 추가.
+- 저장소: code-guide-protocol, guide-protocol, app-guide-plugin.
+
 ## 2026-11-25 (다국어 응답)
 - 모든 튜터가 학습자가 쓰는 언어로 답하도록 바꿈(참고 파일은 한국어 유지, 응답할 때 학습자 언어로 옮김). 퀴즈는 옮겨도 보기 뜻을 유지하고, 채점은 뜻으로 대조.
 - description에 영어 트리거 문장 추가, 제목·README의 '한국어' 표기 정리. 스킬 이름(-ko)은 유지.

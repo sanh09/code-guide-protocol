@@ -4,7 +4,7 @@
   "claude_app_release_notes_through": "2026-11-25",
   "repos": {
     "sanh09/code-guide-protocol": "cc-basics-ko, cc-intermediate-ko, cc-advanced-ko",
-    "sanh09/guide-protocol": "cc-basics-ko-app, cc-intermediate-ko-app, cc-advanced-ko-app, ai-chat-guide-ko",
+    "sanh09/guide-protocol": "cc-basics-ko-app, cc-intermediate-ko-app, cc-advanced-ko-app",
     "sanh09/app-guide-plugin": "ai-chat-guide-ko"
   }
 }
