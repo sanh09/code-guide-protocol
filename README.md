@@ -113,6 +113,26 @@ cd plugins/cc-intermediate-ko/skills/cc-intermediate-ko
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```
 
+## 업데이트 내역
+
+### 2026-11-25: 퀴즈 정답 노출 수정
+- 퀴즈를 낼 때 정답이 문제·예시·힌트에 함께 보이던 문제를 고쳤습니다. 정답은 `references/quiz-answers.md`로 분리되어 채점할 때만 쓰입니다.
+- 보기 순서가 매번 섞이고, 답 형식 예시는 `1-?, 2-?`처럼 자리 표시만 씁니다.
+- 입력창의 회색 자동 제안(Prompt suggestions)에 정답이 뜰 수 있어, 첫 퀴즈 때 안내하고 `/config`에서 끄는 법을 알려 줍니다.
+- 버전: `cc-basics-ko` 0.3.0, `cc-intermediate-ko` 0.2.0, `cc-advanced-ko` 0.2.0
+
+**업데이트 방법**
+- 플러그인: 터미널에서 실행한 뒤 Claude Code를 다시 켜세요.
+  ```bash
+  claude plugin marketplace update sanh09-skills
+  claude plugin update cc-basics-ko@sanh09-skills
+  claude plugin update cc-intermediate-ko@sanh09-skills
+  claude plugin update cc-advanced-ko@sanh09-skills
+  ```
+- curl 설치: 설치 명령을 다시 실행하면 최신 버전으로 바뀝니다.
+
+전체 변경 기록: [`maintenance/CHANGELOG.md`](maintenance/CHANGELOG.md)
+
 ## 유지보수
 
 Claude·Claude Code 업데이트에 맞춘 갱신 절차와 기록은 [`maintenance/`](maintenance/MAINTENANCE.md)에 있습니다. 세 저장소(code-guide-protocol, guide-protocol, app-guide-plugin)를 함께 관리합니다.
