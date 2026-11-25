@@ -112,3 +112,7 @@ plugins/
 cd plugins/cc-intermediate-ko/skills/cc-intermediate-ko
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```
+
+## 유지보수
+
+Claude·Claude Code 업데이트에 맞춘 갱신 절차와 기록은 [`maintenance/`](maintenance/MAINTENANCE.md)에 있습니다. 세 저장소(code-guide-protocol, guide-protocol, app-guide-plugin)를 함께 관리합니다.
