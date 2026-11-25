@@ -2,6 +2,11 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-25 (디렉터리 아이콘)
+- 플러그인 4개에 `.claude-plugin/icon.png`(1024px PNG) 추가. Claude Code 과정은 터미널 `>_`와 단계 막대(기초 초록·중급 파랑·고급 보라), 앱 사용법은 주황 말풍선. 디렉터리 아이콘은 처음 제출할 때 한 번만 등록된다.
+- 버전: cc-basics-ko 0.4.2, cc-intermediate-ko 0.3.2, cc-advanced-ko 0.3.2, ai-chat-guide-ko 0.3.3.
+- 저장소: code-guide-protocol, app-guide-plugin.
+
 ## 2026-11-25 (영어 README·MIT 라이선스)
 - README를 영어 기본(`README.md`)·한국어(`README.ko.md`)로 나눔. 저장소 맨 위와 플러그인 폴더 4곳 모두.
 - MIT 라이선스 추가: 저장소 3곳 맨 위와 플러그인 폴더 4곳에 `LICENSE`, plugin.json에 `"license": "MIT"`.
