@@ -1,6 +1,6 @@
 {
   "name": "cc-advanced-ko",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "한국어 Claude Code 고급 튜터: MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, -p·--bare·GitHub Actions 자동화, worktree 병렬 작업. 시작 전 개발 경험·중급 수료를 확인합니다.",
   "author": {
     "name": "sanh09"
