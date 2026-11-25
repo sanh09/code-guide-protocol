@@ -8,17 +8,17 @@
     {
       "name": "cc-basics-ko",
       "source": "./plugins/cc-basics-ko",
-      "description": "한국어 Claude Code 기초 튜터 (완전 초보자용: 튜토리얼·실습·퀴즈)"
+      "description": "Claude Code 기초 튜터 (완전 초보자용, 학습자 언어로 응답)"
     },
     {
       "name": "cc-intermediate-ko",
       "source": "./plugins/cc-intermediate-ko",
-      "description": "한국어 Claude Code 중급 튜터 (좋은 요청, plan 모드, 권한 규칙, 스킬 만들기, claude -p)"
+      "description": "Claude Code 중급 튜터 (좋은 요청, plan 모드, 권한 규칙, 스킬 만들기, claude -p, 학습자 언어로 응답)"
     },
     {
       "name": "cc-advanced-ko",
       "source": "./plugins/cc-advanced-ko",
-      "description": "한국어 Claude Code 고급 튜터 (MCP, 서브에이전트, 훅, 플러그인 배포, 자동화, 병렬 작업)"
+      "description": "Claude Code 고급 튜터 (MCP, 서브에이전트, 훅, 플러그인 배포, 자동화, 병렬 작업, 학습자 언어로 응답)"
     }
   ]
 }
