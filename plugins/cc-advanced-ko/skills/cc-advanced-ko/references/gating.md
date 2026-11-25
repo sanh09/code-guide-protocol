@@ -61,7 +61,7 @@
   - 중급: "Claude Code 중급 시작할래요" 또는 `/cc-intermediate-ko:cc-intermediate-ko`
   - 설치하지 않았다면:
     ```
-    /plugin marketplace add sanh09/claude-guide
+    /plugin marketplace add sanh09/code-guide-protocol
     /plugin install cc-basics-ko@sanh09-skills
     /plugin install cc-intermediate-ko@sanh09-skills
     ```

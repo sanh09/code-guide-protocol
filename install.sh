@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# claude-guide 스킬 설치 스크립트
+# code-guide-protocol 스킬 설치 스크립트
 #
 # 사용법:
-#   curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash
-#   curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- basics intermediate
-#   curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- --project
-#   curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- --uninstall
+#   curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | bash -s -- basics intermediate
+#   curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | bash -s -- --project
+#   curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | bash -s -- --uninstall
 #
 # 과정 이름: basics | intermediate | advanced | all (기본값 all)
 # 옵션:
@@ -19,7 +19,7 @@
 
 set -euo pipefail
 
-REPO="sanh09/claude-guide"
+REPO="sanh09/code-guide-protocol"
 REF="${CLAUDE_GUIDE_REF:-main}"
 
 say()  { printf '%s\n' "$*"; }
@@ -27,7 +27,7 @@ fail() { printf '오류: %s\n' "$*" >&2; exit 1; }
 
 usage() {
   cat <<EOF
-claude-guide 스킬 설치
+code-guide-protocol 스킬 설치
 
   curl -fsSL https://raw.githubusercontent.com/${REPO}/main/install.sh | bash [-s -- 인자...]
 
@@ -87,7 +87,7 @@ fi
 
 # ---- 내려받기 ----
 command -v tar >/dev/null 2>&1 || fail "tar 명령이 필요해요."
-tmp="$(mktemp -d 2>/dev/null || mktemp -d -t claude-guide)"
+tmp="$(mktemp -d 2>/dev/null || mktemp -d -t code-guide-protocol)"
 trap 'rm -rf "$tmp"' EXIT
 
 if [ -n "${CLAUDE_GUIDE_SRC:-}" ]; then

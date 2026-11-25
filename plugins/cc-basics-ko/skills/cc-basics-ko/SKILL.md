@@ -82,7 +82,7 @@ Claude Code는 업데이트가 잦아서, 기억에 의존하면 이미 바뀐 �
 - 파일을 쓸 수 없는 환경(예: 웹 채팅)이라면 "중급을 시작할 때 '기초 수료했어요'라고 말하면 확인 퀴즈로 바로 확인해 드려요"라고 안내한다.
 - 수료 후에는 다음 단계로 중급 과정을 소개한다. 설치되어 있지 않다면 설치 방법:
   ```
-  /plugin marketplace add sanh09/claude-guide
+  /plugin marketplace add sanh09/code-guide-protocol
   /plugin install cc-intermediate-ko@sanh09-skills
   ```
 

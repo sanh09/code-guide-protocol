@@ -57,7 +57,7 @@
   - 이미 설치했다면 "Claude Code 처음부터 알려주세요"라고 말하거나 `/cc-basics-ko:cc-basics-ko` 입력
   - 설치하지 않았다면:
     ```
-    /plugin marketplace add sanh09/claude-guide
+    /plugin marketplace add sanh09/code-guide-protocol
     /plugin install cc-basics-ko@sanh09-skills
     ```
 - "기초를 마치고 다시 오시면 바로 중급을 시작할게요"로 마무리

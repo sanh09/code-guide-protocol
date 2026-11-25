@@ -216,7 +216,7 @@ exit 0
 - 로컬 테스트: `claude plugin marketplace add ./my-marketplace` → `claude plugin install my-plugin@my-marketplace` → `claude plugin details my-plugin`
 - 배포: GitHub에 push → 사용자는 `/plugin marketplace add owner/repo` → `/plugin install 플러그인@마켓플레이스`
 - 업데이트: `plugin.json`의 `version`을 올려 push한다.
-- 실제 사례: 이 튜터 과정 자체가 `sanh09/claude-guide` 저장소의 `sanh09-skills` 마켓플레이스로 배포되어 있다. 구조를 참고 자료로 보여 줘도 좋다.
+- 실제 사례: 이 튜터 과정 자체가 `sanh09/code-guide-protocol` 저장소의 `sanh09-skills` 마켓플레이스로 배포되어 있다. 구조를 참고 자료로 보여 줘도 좋다.
 
 실습
 1. 레슨 3의 서브에이전트와 중급에서 만든 스킬 하나를 `plugins/my-tools/`로 옮겨 플러그인을 만든다.
