@@ -133,6 +133,9 @@ claude plugin eval . --allow-tools Write,Edit,Bash
 
 전체 변경 기록: [`maintenance/CHANGELOG.md`](maintenance/CHANGELOG.md)
 
+## 변경 방법
+
+이 저장소의 변경은 `main`에 직접 push하지 않고 PR(Pull Request)로 진행합니다. 브랜치를 만들어 수정하고, 검증(`claude plugin validate .` 등)이 통과하면 PR을 merge합니다. 자동 업데이트도 같은 방식으로 PR을 만들고 merge합니다. 자세한 절차: https://github.com/sanh09/code-guide-protocol/blob/main/maintenance/MAINTENANCE.md
 ## 유지보수
 
 Claude·Claude Code 업데이트에 맞춘 갱신 절차와 기록은 [`maintenance/`](maintenance/MAINTENANCE.md)에 있습니다. 세 저장소(code-guide-protocol, guide-protocol, app-guide-plugin)를 함께 관리합니다.

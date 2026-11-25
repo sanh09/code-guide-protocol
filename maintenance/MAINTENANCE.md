@@ -50,12 +50,22 @@
 - `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) LICENSE·README·icon 경고는 무시한다.
 - `bash -n install.sh`가 통과해야 한다.
 
-## 6. 기록하고 push
+## 6. 기록하고 PR로 반영
+
+변경은 `main`에 바로 push하지 않고, 저장소마다 PR을 만들어 검증 후 merge한다.
 
 - 이 저장소의 `maintenance/state.json`을 오늘 날짜와 확인한 버전으로 갱신한다.
 - `maintenance/CHANGELOG.md` 맨 위에 항목을 추가한다: 날짜, 확인한 버전, 바꾼 내용(한 줄씩), 바꾼 저장소.
-- 바뀐 저장소마다 커밋하고 `main`에 push한다. 커밋 메시지 예: `Update facts for Claude Code 2.1.340: /foo renamed to /bar`.
-- 내용 변경이 없으면: 마지막 state 커밋 이후 7일이 지났을 때만 state.json을 갱신해 커밋한다(`chore: update check state`). 그 밖에는 커밋하지 않는다.
+- 바뀐 저장소마다:
+  1. 브랜치 만들기: `git checkout -b auto-update/YYYY-MM-DD`
+  2. 커밋 후 push: `git -c push.negotiate=true push -u origin auto-update/YYYY-MM-DD`. 커밋 메시지 예: `Update facts for Claude Code 2.1.340: /foo renamed to /bar`
+  3. PR 만들기(`gh pr create`가 안 되면 `gh api`):
+     `gh api repos/sanh09/<저장소>/pulls -f title="<제목>" -f head="auto-update/YYYY-MM-DD" -f base=main -f body="<본문>"`
+     - 본문: 바꾼 내용, 근거가 된 공식 문서 링크, 확인한 버전, 검증 결과(5단계). 한국어로 쓴다.
+     - 본문에 "Generated with Claude Code" 같은 생성 도구 표시 줄은 넣지 않는다.
+  4. 5단계 검증이 모두 통과했으면 merge한다: `gh api -X PUT repos/sanh09/<저장소>/pulls/<번호>/merge -f merge_method=squash`
+  5. merge가 거부되면(충돌, 보호 규칙 등) PR을 열어 둔 채로 실행 보고에 적는다.
+- 내용 변경이 없으면: 마지막 state 커밋 이후 7일이 지났을 때만 state.json을 갱신해 같은 방식(PR → merge)으로 반영한다(`chore: update check state`). 그 밖에는 아무것도 만들지 않는다.
 
 ## 7. 실행 보고
 
@@ -63,6 +73,6 @@
 
 ## 하지 않는 것
 
-- 저장소 이름 변경, 삭제, 강제 push(`--force`), 히스토리 다시 쓰기
+- `main`에 직접 push, 저장소 이름 변경, 삭제, 강제 push(`--force`), 히스토리 다시 쓰기
 - 스킬 구조나 수업 방식 같은 설계 변경 (사실 갱신만 한다)
 - 출처 없는 내용 추가
