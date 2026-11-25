@@ -2,6 +2,10 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-25 (고급 과정 예시 이름)
+- cc-advanced·cc-advanced-app의 facts.md '실제 사례'를 새 플러그인 이름(codeguide-*)으로 고침. codeguide-advanced 0.4.2.
+- 저장소: code-guide-protocol, guide-protocol.
+
 ## 2026-11-25 (플러그인 이름 고유화)
 - 디렉터리 검사에서 `cc-basics`가 기존 커넥터 'Basi OS'와 비슷하다고 거절 대상이 됨. 플러그인 이름만 바꿈: codeguide-basics, codeguide-intermediate, codeguide-advanced, appguide-tutor. 스킬 이름(cc-basics 등, ai-chat-guide)과 폴더 경로는 그대로.
 - 설치 명령과 직접 부르는 명령(`/codeguide-basics:cc-basics` 등)을 고침. 버전: 0.5.1, 0.4.1, 0.4.1, 0.4.1.
