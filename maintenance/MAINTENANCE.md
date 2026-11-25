@@ -50,6 +50,7 @@
 - app-guide-plugin: `plugins/ai-chat-guide/.claude-plugin/plugin.json`의 `version`을 올린다.
 - guide-protocol, app-guide-plugin: `bash scripts/build-dist.sh`로 `dist/` zip을 다시 만든다.
 - `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) icon 경고는 무시한다.
+- 교재·예시에 실제 자격 증명처럼 보이는 값을 쓰지 않는다. 토큰·키 예시는 `YOUR_API_KEY` 같은 가짜 값으로 쓰고, `$GITHUB_TOKEN`·`${MY_TOKEN}`처럼 사용자 환경의 자격 증명을 읽는 형태의 예시는 피한다(디렉터리 검사가 경고하고, 업데이트가 거절될 수 있다).
 - Anthropic 디렉터리 제출 요건을 지킨다: 각 플러그인 폴더에 `README.md`(코드 블록 제외 40단어 이상)와 `LICENSE`를 유지하고, 플러그인 폴더 안에 zip·pdf 같은 바이너리나 256KiB가 넘는 파일을 넣지 않는다. 플러그인 폴더 안의 내용을 바꾸면 반드시 `version`을 올린다(디렉터리가 `main`의 새 커밋을 새 버전으로 검사한다).
 - `bash -n install.sh`가 통과해야 한다.
 

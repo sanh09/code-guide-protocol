@@ -2,6 +2,10 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-25 (자격 증명 예시 표현)
+- 디렉터리 검사가 고급 과정의 토큰 예시(`${MY_TOKEN}`, `Bearer your-token`)를 '사용자 컴퓨터의 자격 증명 사용'으로 경고함. 가르치는 내용은 그대로 두고 표현만 바꿈: 퀴즈 L2-4 보기와 정답표 → '`${...}` 형식으로 환경 변수를 참조', 헤더 예시 → `Bearer YOUR_API_KEY`. codeguide-advanced 0.4.3.
+- 저장소: code-guide-protocol, guide-protocol.
+
 ## 2026-11-25 (고급 과정 예시 이름)
 - cc-advanced·cc-advanced-app의 facts.md '실제 사례'를 새 플러그인 이름(codeguide-*)으로 고침. codeguide-advanced 0.4.2.
 - 저장소: code-guide-protocol, guide-protocol.
