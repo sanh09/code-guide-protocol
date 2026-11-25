@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: compact-vs-clear
+expected_outcome: |
+  Korean explanation of /compact vs /clear with a simple analogy, when to use each, and a small practice task.

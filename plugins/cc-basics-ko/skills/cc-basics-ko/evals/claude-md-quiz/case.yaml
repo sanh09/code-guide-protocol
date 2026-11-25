@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: claude-md-quiz
+expected_outcome: |
+  Korean multiple-choice quiz of 3-5 situational questions on CLAUDE.md, with answers withheld until the learner responds.

@@ -1,0 +1,14 @@
+{
+  "name": "sanh09-skills",
+  "description": "sanh09의 Claude Code 플러그인 모음",
+  "owner": {
+    "name": "sanh09"
+  },
+  "plugins": [
+    {
+      "name": "cc-basics-ko",
+      "source": "./plugins/cc-basics-ko",
+      "description": "완전 초보자를 위한 한국어 Claude Code 기초 튜터 (튜토리얼·실습·퀴즈)"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: start-from-scratch
+expected_outcome: |
+  Korean beginner-friendly first lesson: shows lesson overview, covers only a small first step with a hands-on practice task, and ends by asking the learner to try it.
