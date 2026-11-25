@@ -42,13 +42,15 @@
 - 확실하지 않으면 고치지 않고 실행 보고에 "확인 필요"로 남긴다.
 - 문체: 참고 파일(`references/*.md`)은 한국어로 쓰고, 기존 표현과 서식을 따른다. 스킬은 이 내용을 학습자의 언어로 옮겨 가르치므로, 번역해도 뜻이 흔들리지 않게 분명하게 쓴다.
 - `SKILL.md`의 '응답 언어' 규칙(학습자가 쓰는 언어로 답하기)과 description의 영어 트리거 문장은 지우지 않는다.
+- README는 두 언어로 관리한다: `README.md`(영어, 기본)와 `README.ko.md`(한국어). 저장소 맨 위와 각 플러그인 폴더(`plugins/<스킬>/`) 모두 해당한다. 업데이트 내역이나 내용을 고칠 때 두 파일을 같은 뜻으로 함께 고친다.
 
 ## 5. 버전·빌드·검증
 
 - code-guide-protocol: 바뀐 플러그인의 `plugins/<스킬>/.claude-plugin/plugin.json`의 `version` 패치 번호를 올린다(예: 0.1.2 → 0.1.3).
 - app-guide-plugin: `plugins/ai-chat-guide-ko/.claude-plugin/plugin.json`의 `version`을 올린다.
 - guide-protocol, app-guide-plugin: `bash scripts/build-dist.sh`로 `dist/` zip을 다시 만든다.
-- `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) LICENSE·README·icon 경고는 무시한다.
+- `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) icon 경고는 무시한다.
+- Anthropic 디렉터리 제출 요건을 지킨다: 각 플러그인 폴더에 `README.md`(코드 블록 제외 40단어 이상)와 `LICENSE`를 유지하고, 플러그인 폴더 안에 zip·pdf 같은 바이너리나 256KiB가 넘는 파일을 넣지 않는다. 플러그인 폴더 안의 내용을 바꾸면 반드시 `version`을 올린다(디렉터리가 `main`의 새 커밋을 새 버전으로 검사한다).
 - `bash -n install.sh`가 통과해야 한다.
 
 ## 6. 기록하고 PR로 반영

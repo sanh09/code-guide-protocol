@@ -1,10 +1,13 @@
 {
   "name": "cc-basics-ko",
-  "version": "0.4.0",
-  "description": "Claude Code 기초 튜터(학습자가 쓰는 언어로 응답): 슬래시 명령, 단축키, CLAUDE.md, settings.json을 단계별 튜토리얼·실습·퀴즈로 가르칩니다. Beginner Claude Code tutor that replies in the learner's language.",
+  "version": "0.4.1",
+  "description": "Step-by-step Claude Code tutor for complete beginners: slash commands, shortcuts, CLAUDE.md, and settings.json, taught with tutorials, exercises, and quizzes in the learner's language. (Claude Code 기초 튜터, 학습자가 쓰는 언어로 응답)",
   "author": {
     "name": "sanh09"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/sanh09/code-guide-protocol/tree/main/plugins/cc-basics-ko",
+  "repository": "https://github.com/sanh09/code-guide-protocol",
   "keywords": [
     "claude-code",
     "tutorial",

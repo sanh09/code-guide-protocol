@@ -1,10 +1,13 @@
 {
   "name": "cc-intermediate-ko",
-  "version": "0.3.0",
-  "description": "Claude Code 중급 튜터(학습자가 쓰는 언어로 응답): 좋은 요청, plan 모드 워크플로, git·PR, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션 관리, claude -p. 시작 전 개발 경험·기초 수료를 확인합니다. Intermediate Claude Code tutor in the learner's language.",
+  "version": "0.3.1",
+  "description": "Intermediate Claude Code tutor: good requests, the plan-mode workflow, git and PRs, permission rules, your own slash commands, session management, and claude -p, in the learner's language. Checks experience or Basics completion first. (Claude Code 중급 튜터)",
   "author": {
     "name": "sanh09"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/sanh09/code-guide-protocol/tree/main/plugins/cc-intermediate-ko",
+  "repository": "https://github.com/sanh09/code-guide-protocol",
   "keywords": [
     "claude-code",
     "tutorial",
