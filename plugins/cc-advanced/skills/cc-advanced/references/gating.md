@@ -61,13 +61,13 @@
 
 - 이유 한두 문장 (예: "훅과 자동화는 명령을 자동으로 실행해서, 권한 규칙과 `-p`를 먼저 익혀 두어야 안전하게 쓸 수 있어요")
 - 안내할 과정과 시작 방법:
-  - 기초: "Claude Code 처음부터 알려주세요" 또는 `/cc-basics:cc-basics`
-  - 중급: "Claude Code 중급 시작할래요" 또는 `/cc-intermediate:cc-intermediate`
+  - 기초: "Claude Code 처음부터 알려주세요" 또는 `/codeguide-basics:cc-basics`
+  - 중급: "Claude Code 중급 시작할래요" 또는 `/codeguide-intermediate:cc-intermediate`
   - 설치하지 않았다면:
     ```
     /plugin marketplace add sanh09/code-guide-protocol
-    /plugin install cc-basics@sanh09-skills
-    /plugin install cc-intermediate@sanh09-skills
+    /plugin install codeguide-basics@sanh09-skills
+    /plugin install codeguide-intermediate@sanh09-skills
     ```
 - 퀴즈를 아깝게 통과하지 못했다면(3/5) 해당 중급 레슨만 복습하고 다시 확인 퀴즈를 볼 수 있다고 알려 준다.
 

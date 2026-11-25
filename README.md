@@ -8,9 +8,9 @@ Tutor skills that teach Claude Code **one step at a time**. Each course is made 
 
 | Course | Plugin | For | Covers |
 |---|---|---|---|
-| Basics | `cc-basics` | People new to the terminal and coding | First conversation, input prefixes (`/` `!` `@`) and shortcuts, managing a conversation (`/clear` `/compact` `/resume` `/rewind`), permissions and modes, `CLAUDE.md`, `settings.json` |
-| Intermediate | `cc-intermediate` | Developers, or people who finished Basics | Writing good requests, explore → plan → implement → commit (plan mode), git, PRs and checkpoints, permission rules in depth, your own slash commands (skills), session and context management, `claude -p` |
-| Advanced | `cc-advanced` | People who finished Intermediate or passed its check quiz | Choosing an extension type, MCP, subagents, hooks, building and publishing skills and plugins, `--bare`, CI and GitHub Actions automation, parallel work with worktrees and review |
+| Basics | `codeguide-basics` (skill `cc-basics`) | People new to the terminal and coding | First conversation, input prefixes (`/` `!` `@`) and shortcuts, managing a conversation (`/clear` `/compact` `/resume` `/rewind`), permissions and modes, `CLAUDE.md`, `settings.json` |
+| Intermediate | `codeguide-intermediate` (skill `cc-intermediate`) | Developers, or people who finished Basics | Writing good requests, explore → plan → implement → commit (plan mode), git, PRs and checkpoints, permission rules in depth, your own slash commands (skills), session and context management, `claude -p` |
+| Advanced | `codeguide-advanced` (skill `cc-advanced`) | People who finished Intermediate or passed its check quiz | Choosing an extension type, MCP, subagents, hooks, building and publishing skills and plugins, `--bare`, CI and GitHub Actions automation, parallel work with worktrees and review |
 
 ## Level checks (Intermediate and Advanced)
 
@@ -26,18 +26,18 @@ Inside Claude Code:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-basics@sanh09-skills
-/plugin install cc-intermediate@sanh09-skills
-/plugin install cc-advanced@sanh09-skills
+/plugin install codeguide-basics@sanh09-skills
+/plugin install codeguide-intermediate@sanh09-skills
+/plugin install codeguide-advanced@sanh09-skills
 ```
 
 Or from a terminal:
 
 ```bash
 claude plugin marketplace add sanh09/code-guide-protocol
-claude plugin install cc-basics@sanh09-skills
-claude plugin install cc-intermediate@sanh09-skills
-claude plugin install cc-advanced@sanh09-skills
+claude plugin install codeguide-basics@sanh09-skills
+claude plugin install codeguide-intermediate@sanh09-skills
+claude plugin install codeguide-advanced@sanh09-skills
 ```
 
 You can install only the courses you need.
@@ -88,7 +88,7 @@ Say something like this in Claude Code and the right skill starts:
 - Intermediate: "Start the Claude Code intermediate course", "How do I use plan mode well?", "How do I write permission rules?"
 - Advanced: "How do I connect an MCP server?", "I want to set up hooks", "How do I build and publish a plugin?"
 
-To call a skill directly, type `/cc-basics:cc-basics`, `/cc-intermediate:cc-intermediate`, or `/cc-advanced:cc-advanced` if you installed the plugins, or `/cc-basics`, `/cc-intermediate`, `/cc-advanced` if you installed with curl.
+To call a skill directly, type `/codeguide-basics:cc-basics`, `/codeguide-intermediate:cc-intermediate`, or `/codeguide-advanced:cc-advanced` if you installed the plugins, or `/cc-basics`, `/cc-intermediate`, `/cc-advanced` if you installed with curl.
 
 ## What the plugins do on your machine
 
@@ -129,6 +129,7 @@ claude plugin eval . --allow-tools Write,Edit,Bash
 
 ### 2026-11-25: `-ko` dropped from the names (action needed)
 - The plugins and skills are renamed: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. The tutors still reply in the learner's language.
+- Plugin names are now `codeguide-basics`, `codeguide-intermediate`, and `codeguide-advanced`; each holds the skill of the same course (`cc-basics` and so on). The short names were too close to existing directory listings.
 - Progress records saved under the old names are still recognized.
 - Versions: `cc-basics` 0.5.0, `cc-intermediate` 0.4.0, `cc-advanced` 0.4.0
 
@@ -139,9 +140,9 @@ claude plugin eval . --allow-tools Write,Edit,Bash
   claude plugin uninstall cc-intermediate-ko@sanh09-skills
   claude plugin uninstall cc-advanced-ko@sanh09-skills
   claude plugin marketplace update sanh09-skills
-  claude plugin install cc-basics@sanh09-skills
-  claude plugin install cc-intermediate@sanh09-skills
-  claude plugin install cc-advanced@sanh09-skills
+  claude plugin install codeguide-basics@sanh09-skills
+  claude plugin install codeguide-intermediate@sanh09-skills
+  claude plugin install codeguide-advanced@sanh09-skills
   ```
   Uninstall only the ones you had, and install only the courses you want.
 - curl install: run the install command again. It removes the old `-ko` folders for you.

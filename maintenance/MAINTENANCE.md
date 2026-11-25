@@ -6,9 +6,9 @@
 
 | 저장소 | 스킬 | 사실 파일 |
 |---|---|---|
-| sanh09/code-guide-protocol | `cc-basics`, `cc-intermediate`, `cc-advanced` | `plugins/<스킬>/skills/<스킬>/references/facts.md` |
+| sanh09/code-guide-protocol | `cc-basics`, `cc-intermediate`, `cc-advanced` (플러그인 이름 `codeguide-basics` 등) | `plugins/<스킬>/skills/<스킬>/references/facts.md` |
 | sanh09/guide-protocol | `cc-basics-app`, `cc-intermediate-app`, `cc-advanced-app` | `skills/<스킬>/references/facts.md` |
-| sanh09/app-guide-plugin | `ai-chat-guide` (이 저장소에서만 관리) | `plugins/ai-chat-guide/skills/ai-chat-guide/references/facts.md` |
+| sanh09/app-guide-plugin | `ai-chat-guide` (플러그인 이름 `appguide-tutor`, 이 저장소에서만 관리) | `plugins/ai-chat-guide/skills/ai-chat-guide/references/facts.md` |
 
 짝을 이루는 파일은 같은 사실을 담아야 한다.
 - `cc-X`(code-guide-protocol) ↔ `cc-X-app`(guide-protocol)의 `facts.md`와 `curriculum.md`. 단, 앱 버전 curriculum에서는 학습 기록 파일(`cc-tutor-progress.md`) 관련 문장을 뺐다. 그 차이는 유지한다.

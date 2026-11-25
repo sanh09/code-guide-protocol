@@ -1,4 +1,4 @@
-# cc-intermediate: Claude Code 중급 튜터
+# codeguide-intermediate: Claude Code 중급 튜터
 
 [English](README.md) | **한국어**
 
@@ -34,10 +34,10 @@ Claude Code에서:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-intermediate@sanh09-skills
+/plugin install codeguide-intermediate@sanh09-skills
 ```
 
-설치한 뒤 Claude Code를 다시 켜고, 배우고 싶은 내용을 말하거나 `/cc-intermediate:cc-intermediate`을 입력하세요.
+이 플러그인에는 스킬 `cc-intermediate`가 들어 있습니다. 설치한 뒤 Claude Code를 다시 켜고, 배우고 싶은 내용을 말하거나 `/codeguide-intermediate:cc-intermediate`을 입력하세요.
 
 ## 내 컴퓨터에서 하는 일
 

@@ -9,9 +9,9 @@ Claude Code를 **한 단계씩** 배우는 튜터 스킬 모음입니다. 각 �
 
 | 과정 | 플러그인 | 대상 | 다루는 내용 |
 |---|---|---|---|
-| 기초 | `cc-basics` | 터미널·코딩이 처음인 사람 | 첫 대화, 입력 기호(`/` `!` `@`)와 단축키, 대화 관리(`/clear` `/compact` `/resume` `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json` |
-| 중급 | `cc-intermediate` | 개발 경험자 또는 기초 수료자 | 좋은 요청 쓰기, 탐색→계획→구현→커밋(plan 모드), git·PR·체크포인트, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션·컨텍스트 관리, `claude -p` |
-| 고급 | `cc-advanced` | 중급 수료자 또는 확인 퀴즈 통과자 | 확장 기능 고르기, MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, `--bare`·CI·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 |
+| 기초 | `codeguide-basics` (스킬 `cc-basics`) | 터미널·코딩이 처음인 사람 | 첫 대화, 입력 기호(`/` `!` `@`)와 단축키, 대화 관리(`/clear` `/compact` `/resume` `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json` |
+| 중급 | `codeguide-intermediate` (스킬 `cc-intermediate`) | 개발 경험자 또는 기초 수료자 | 좋은 요청 쓰기, 탐색→계획→구현→커밋(plan 모드), git·PR·체크포인트, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션·컨텍스트 관리, `claude -p` |
+| 고급 | `codeguide-advanced` (스킬 `cc-advanced`) | 중급 수료자 또는 확인 퀴즈 통과자 | 확장 기능 고르기, MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, `--bare`·CI·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 |
 
 ## 수준 확인 (중급·고급)
 
@@ -27,18 +27,18 @@ Claude Code 안에서:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-basics@sanh09-skills
-/plugin install cc-intermediate@sanh09-skills
-/plugin install cc-advanced@sanh09-skills
+/plugin install codeguide-basics@sanh09-skills
+/plugin install codeguide-intermediate@sanh09-skills
+/plugin install codeguide-advanced@sanh09-skills
 ```
 
 또는 터미널에서:
 
 ```bash
 claude plugin marketplace add sanh09/code-guide-protocol
-claude plugin install cc-basics@sanh09-skills
-claude plugin install cc-intermediate@sanh09-skills
-claude plugin install cc-advanced@sanh09-skills
+claude plugin install codeguide-basics@sanh09-skills
+claude plugin install codeguide-intermediate@sanh09-skills
+claude plugin install codeguide-advanced@sanh09-skills
 ```
 
 필요한 과정만 골라 설치해도 됩니다.
@@ -89,7 +89,7 @@ Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니
 - 중급: "Claude Code 중급 시작할래요", "plan 모드 잘 쓰는 법", "권한 규칙 쓰는 법"
 - 고급: "MCP 서버 연결하는 법", "훅 설정하고 싶어요", "플러그인 만들어서 배포하기"
 
-직접 부르려면 플러그인으로 설치한 경우 `/cc-basics:cc-basics`, `/cc-intermediate:cc-intermediate`, `/cc-advanced:cc-advanced`를, curl로 설치한 경우 `/cc-basics`, `/cc-intermediate`, `/cc-advanced`를 입력하세요.
+직접 부르려면 플러그인으로 설치한 경우 `/codeguide-basics:cc-basics`, `/codeguide-intermediate:cc-intermediate`, `/codeguide-advanced:cc-advanced`를, curl로 설치한 경우 `/cc-basics`, `/cc-intermediate`, `/cc-advanced`를 입력하세요.
 
 ## 내 컴퓨터에서 하는 일
 
@@ -130,6 +130,7 @@ claude plugin eval . --allow-tools Write,Edit,Bash
 
 ### 2026-11-25: 이름에서 `-ko` 제거 (재설치 필요)
 - 플러그인과 스킬 이름을 바꿨습니다: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. 학습자가 쓰는 언어로 답하는 것은 그대로입니다.
+- 플러그인 이름은 `codeguide-basics`, `codeguide-intermediate`, `codeguide-advanced`이고, 각각 같은 과정의 스킬(`cc-basics` 등)을 담습니다. 짧은 이름이 디렉터리의 기존 항목과 너무 비슷해서 바꿨습니다.
 - 예전 이름으로 저장된 학습 기록도 그대로 인정합니다.
 - 버전: `cc-basics` 0.5.0, `cc-intermediate` 0.4.0, `cc-advanced` 0.4.0
 
@@ -140,9 +141,9 @@ claude plugin eval . --allow-tools Write,Edit,Bash
   claude plugin uninstall cc-intermediate-ko@sanh09-skills
   claude plugin uninstall cc-advanced-ko@sanh09-skills
   claude plugin marketplace update sanh09-skills
-  claude plugin install cc-basics@sanh09-skills
-  claude plugin install cc-intermediate@sanh09-skills
-  claude plugin install cc-advanced@sanh09-skills
+  claude plugin install codeguide-basics@sanh09-skills
+  claude plugin install codeguide-intermediate@sanh09-skills
+  claude plugin install codeguide-advanced@sanh09-skills
   ```
   설치했던 것만 지우고, 원하는 과정만 설치하면 됩니다.
 - curl 설치: 설치 명령을 다시 실행하세요. 예전 `-ko` 폴더는 자동으로 지워집니다.

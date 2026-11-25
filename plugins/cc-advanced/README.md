@@ -1,4 +1,4 @@
-# cc-advanced: Claude Code Advanced tutor
+# codeguide-advanced: Claude Code Advanced tutor
 
 **English** | [한국어](README.ko.md)
 
@@ -34,10 +34,10 @@ In Claude Code:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-advanced@sanh09-skills
+/plugin install codeguide-advanced@sanh09-skills
 ```
 
-Then restart Claude Code and say what you want to learn, or type `/cc-advanced:cc-advanced`.
+The plugin contains one skill, `cc-advanced`. Then restart Claude Code and say what you want to learn, or type `/codeguide-advanced:cc-advanced`.
 
 ## What it does on your machine
 

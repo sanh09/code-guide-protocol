@@ -1,4 +1,4 @@
-# cc-intermediate: Claude Code Intermediate tutor
+# codeguide-intermediate: Claude Code Intermediate tutor
 
 **English** | [한국어](README.ko.md)
 
@@ -34,10 +34,10 @@ In Claude Code:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-intermediate@sanh09-skills
+/plugin install codeguide-intermediate@sanh09-skills
 ```
 
-Then restart Claude Code and say what you want to learn, or type `/cc-intermediate:cc-intermediate`.
+The plugin contains one skill, `cc-intermediate`. Then restart Claude Code and say what you want to learn, or type `/codeguide-intermediate:cc-intermediate`.
 
 ## What it does on your machine
 

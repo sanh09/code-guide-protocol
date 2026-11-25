@@ -58,11 +58,11 @@
 
 - 왜 기초가 먼저인지 한두 문장 (예: "중급은 터미널 명령과 설정 파일을 직접 다뤄서, 기초가 없으면 실습에서 막히기 쉬워요")
 - 기초 과정 시작 방법:
-  - 이미 설치했다면 "Claude Code 처음부터 알려주세요"라고 말하거나 `/cc-basics:cc-basics` 입력
+  - 이미 설치했다면 "Claude Code 처음부터 알려주세요"라고 말하거나 `/codeguide-basics:cc-basics` 입력
   - 설치하지 않았다면:
     ```
     /plugin marketplace add sanh09/code-guide-protocol
-    /plugin install cc-basics@sanh09-skills
+    /plugin install codeguide-basics@sanh09-skills
     ```
 - "기초를 마치고 다시 오시면 바로 중급을 시작할게요"로 마무리
 
