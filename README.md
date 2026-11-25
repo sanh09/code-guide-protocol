@@ -72,6 +72,30 @@ curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh
 - 스크립트는 실행 전에 내용을 확인할 수 있어요: `curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | less`
 - Windows에서는 WSL이나 Git Bash에서 실행하거나, 위의 플러그인 방식을 쓰세요.
 
+## Claude 웹·데스크톱 앱에서 쓰기 (`claude-app/`)
+
+위의 플러그인과 curl 설치는 **Claude Code 전용**이에요. Claude 웹(claude.ai)이나 데스크톱 앱의 채팅에서 배우려면 앱 전용 스킬을 따로 추가하세요.
+
+| 과정 | 앱 전용 스킬 | 파일 |
+|---|---|---|
+| 기초 | `cc-basics-ko-app` | [`claude-app/dist/cc-basics-ko-app.zip`](claude-app/dist/cc-basics-ko-app.zip) |
+| 중급 | `cc-intermediate-ko-app` | [`claude-app/dist/cc-intermediate-ko-app.zip`](claude-app/dist/cc-intermediate-ko-app.zip) |
+| 고급 | `cc-advanced-ko-app` | [`claude-app/dist/cc-advanced-ko-app.zip`](claude-app/dist/cc-advanced-ko-app.zip) |
+
+**추가 방법**
+1. 위 `.zip` 파일을 내려받으세요(파일을 연 뒤 "Download raw file"). 압축은 풀지 않아요.
+2. Claude 웹 또는 데스크톱 앱에서 **사용자 정의(Customize) > 스킬(Skills)**로 가세요.
+3. "+" 버튼 → "+ 스킬 만들기" → "스킬 업로드"를 누르고 `.zip` 파일을 올리세요.
+4. 목록에 나타난 스킬이 켜져 있는지 확인하고, 새 채팅에서 "Claude Code 처음부터 알려주세요"처럼 말하면 시작돼요.
+
+스킬을 쓰려면 설정에서 코드 실행(파일 생성) 기능이 켜져 있어야 해요. Enterprise 플랜은 조직 관리자가 스킬 기능을 허용해야 해요.
+
+**Claude Code 버전과 다른 점**
+- 채팅의 Claude는 내 컴퓨터를 볼 수 없어서, 실습은 내 터미널의 Claude Code에서 하고 결과(출력, 스크린샷)를 채팅에 올리는 방식으로 진행해요.
+- 학습 기록 파일을 쓰지 않아요. 새 채팅에서 중급·고급을 시작하면 질문과 짧은 확인 퀴즈로 수준을 확인해요.
+- 퀴즈 카드와 그림 같은 채팅 앱 기능을 활용해요.
+- 소스는 `claude-app/<스킬 이름>/` 폴더에 있어요.
+
 ## 사용법
 
 Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니다.
@@ -85,7 +109,8 @@ Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니
 ## 구조
 
 ```
-install.sh                             curl 설치 스크립트
+install.sh                             curl 설치 스크립트 (Claude Code용)
+claude-app/                            Claude 웹·데스크톱 앱 전용 스킬 (소스와 dist/*.zip)
 .claude-plugin/marketplace.json        마켓플레이스 정의 (sanh09-skills)
 plugins/
   cc-basics-ko/                        기초

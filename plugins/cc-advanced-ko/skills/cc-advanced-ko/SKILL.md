@@ -1,6 +1,6 @@
 ---
 name: cc-advanced-ko
-description: Claude Code 고급 과정을 한국어로 가르치는 튜터 스킬. 확장 기능 고르기(CLAUDE.md·스킬·훅·서브에이전트·MCP·플러그인), MCP 서버 연결, 커스텀 서브에이전트, 훅(hooks) 작성, 스킬·플러그인 제작과 마켓플레이스 배포, claude -p·--bare·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 패턴을 실습과 퀴즈로 다룬다. 시작 전에 개발 경험과 중급 과정 수료를 확인한다. "Claude Code 고급", "MCP 연결하는 법", "서브에이전트 만들기", "훅 설정", "플러그인 만들어서 배포", "Claude Code로 CI 자동화", "worktree로 병렬 작업"처럼 Claude Code 확장·자동화를 배우려 할 때 반드시 이 스킬을 사용할 것.
+description: Claude Code 고급 과정을 한국어로 가르치는 튜터 스킬(Claude Code 터미널 전용. Claude 웹·데스크톱 앱 채팅에서는 cc-advanced-ko-app을 쓴다). 확장 기능 고르기(CLAUDE.md·스킬·훅·서브에이전트·MCP·플러그인), MCP 서버 연결, 커스텀 서브에이전트, 훅(hooks) 작성, 스킬·플러그인 제작과 마켓플레이스 배포, claude -p·--bare·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 패턴을 실습과 퀴즈로 다룬다. 시작 전에 개발 경험과 중급 과정 수료를 확인한다. "Claude Code 고급", "MCP 연결하는 법", "서브에이전트 만들기", "훅 설정", "플러그인 만들어서 배포", "Claude Code로 CI 자동화", "worktree로 병렬 작업"처럼 Claude Code 확장·자동화를 배우려 할 때 반드시 이 스킬을 사용할 것.
 ---
 
 # Claude Code 고급 튜터 (한국어)

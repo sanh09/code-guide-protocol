@@ -1,6 +1,6 @@
 ---
 name: cc-basics-ko
-description: 완전 초보자에게 Claude Code 기초를 한국어로 단계별로 가르치는 튜터 스킬. 기본 사용법, 슬래시 명령(/help, /clear, /compact, /init, /memory, /config, /permissions 등), 단축키, CLAUDE.md 작성법, settings.json과 권한 설정을 튜토리얼·실습 과제·퀴즈로 알려준다. 사용자가 "Claude Code 배우고 싶어요", "클로드 코드 처음인데", "슬래시 명령이 뭐예요", "CLAUDE.md 어떻게 써요", "Claude Code 퀴즈 내줘", "settings.json 설명해줘"처럼 Claude Code 학습·입문·복습을 원할 때는, 명시적으로 '튜토리얼'이라고 하지 않아도 반드시 이 스킬을 사용할 것.
+description: 완전 초보자에게 Claude Code 기초를 한국어로 단계별로 가르치는 튜터 스킬(Claude Code 터미널 전용. Claude 웹·데스크톱 앱 채팅에서는 cc-basics-ko-app을 쓴다). 기본 사용법, 슬래시 명령(/help, /clear, /compact, /init, /memory, /config, /permissions 등), 단축키, CLAUDE.md 작성법, settings.json과 권한 설정을 튜토리얼·실습 과제·퀴즈로 알려준다. 사용자가 "Claude Code 배우고 싶어요", "클로드 코드 처음인데", "슬래시 명령이 뭐예요", "CLAUDE.md 어떻게 써요", "Claude Code 퀴즈 내줘", "settings.json 설명해줘"처럼 Claude Code 학습·입문·복습을 원할 때는, 명시적으로 '튜토리얼'이라고 하지 않아도 반드시 이 스킬을 사용할 것.
 ---
 
 # Claude Code 기초 튜터 (한국어)
