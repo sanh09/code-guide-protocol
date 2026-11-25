@@ -93,7 +93,7 @@ Claude Code는 업데이트가 잦아서, 기억에 의존하면 이미 바뀐 �
 - 수료 후에는 다음 단계로 중급 과정을 소개한다. 설치되어 있지 않다면 설치 방법:
   ```
   /plugin marketplace add sanh09/code-guide-protocol
-  /plugin install cc-intermediate@sanh09-skills
+  /plugin install codeguide-intermediate@sanh09-skills
   ```
 
 ## 참고 파일

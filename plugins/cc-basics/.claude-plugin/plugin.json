@@ -1,6 +1,6 @@
 {
-  "name": "cc-basics",
-  "version": "0.5.0",
+  "name": "codeguide-basics",
+  "version": "0.5.1",
   "description": "Step-by-step Claude Code tutor for complete beginners: slash commands, shortcuts, CLAUDE.md, and settings.json, taught with tutorials, exercises, and quizzes in the learner's language. (Claude Code 기초 튜터, 학습자가 쓰는 언어로 응답)",
   "author": {
     "name": "sanh09"

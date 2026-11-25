@@ -1,4 +1,4 @@
-# cc-basics: Claude Code Basics tutor
+# codeguide-basics: Claude Code Basics tutor
 
 **English** | [한국어](README.ko.md)
 
@@ -29,10 +29,10 @@ In Claude Code:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-basics@sanh09-skills
+/plugin install codeguide-basics@sanh09-skills
 ```
 
-Then restart Claude Code and say what you want to learn, or type `/cc-basics:cc-basics`.
+The plugin contains one skill, `cc-basics`. Then restart Claude Code and say what you want to learn, or type `/codeguide-basics:cc-basics`.
 
 ## What it does on your machine
 
