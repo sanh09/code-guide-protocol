@@ -38,13 +38,39 @@ claude plugin install cc-advanced-ko@sanh09-skills
 
 필요한 과정만 골라 설치해도 됩니다.
 
-### 플러그인 없이 스킬 폴더만 복사하기
+### curl로 설치하기 (플러그인 없이, macOS·Linux·WSL)
+
+터미널에서 한 줄이면 세 과정이 모두 `~/.claude/skills/`에 설치됩니다.
 
 ```bash
-git clone https://github.com/sanh09/claude-guide.git
-mkdir -p ~/.claude/skills
-cp -r claude-guide/plugins/*/skills/* ~/.claude/skills/
+curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash
 ```
+
+원하는 과정만 설치하거나 위치를 바꿀 수도 있어요. `bash -s --` 뒤에 인자를 붙이세요.
+
+```bash
+# 기초와 중급만 설치
+curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- basics intermediate
+
+# 지금 폴더(프로젝트)의 .claude/skills/ 에 설치. 팀과 git으로 공유할 때
+curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- --project
+
+# 삭제
+curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | bash -s -- --uninstall
+```
+
+| 인자 | 뜻 |
+|---|---|
+| `basics` `intermediate` `advanced` | 설치할 과정 (여러 개 가능) |
+| `all` | 세 과정 모두 (기본값) |
+| `--project` | `~/.claude/skills/` 대신 현재 폴더의 `.claude/skills/`에 설치 |
+| `--uninstall` | 설치한 스킬 폴더 삭제 (학습 기록은 남김) |
+
+- 업데이트: 같은 명령을 다시 실행하면 최신 버전으로 덮어씁니다.
+- 설치 뒤 Claude Code를 새로 켜고, `/cc-basics-ko`, `/cc-intermediate-ko`, `/cc-advanced-ko`로 부르거나 그냥 말로 요청하세요.
+- 플러그인 방식과 curl 방식 중 **하나만** 쓰세요. 둘 다 설치하면 같은 스킬이 두 번 보입니다.
+- 스크립트는 실행 전에 내용을 확인할 수 있어요: `curl -fsSL https://raw.githubusercontent.com/sanh09/claude-guide/main/install.sh | less`
+- Windows에서는 WSL이나 Git Bash에서 실행하거나, 위의 플러그인 방식을 쓰세요.
 
 ## 사용법
 
@@ -54,11 +80,12 @@ Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니
 - 중급: "Claude Code 중급 시작할래요", "plan 모드 잘 쓰는 법", "권한 규칙 쓰는 법"
 - 고급: "MCP 서버 연결하는 법", "훅 설정하고 싶어요", "플러그인 만들어서 배포하기"
 
-직접 부르려면 `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-ko:cc-intermediate-ko`, `/cc-advanced-ko:cc-advanced-ko`를 입력하세요.
+직접 부르려면 플러그인으로 설치한 경우 `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-ko:cc-intermediate-ko`, `/cc-advanced-ko:cc-advanced-ko`를, curl로 설치한 경우 `/cc-basics-ko`, `/cc-intermediate-ko`, `/cc-advanced-ko`를 입력하세요.
 
 ## 구조
 
 ```
+install.sh                             curl 설치 스크립트
 .claude-plugin/marketplace.json        마켓플레이스 정의 (sanh09-skills)
 plugins/
   cc-basics-ko/                        기초
