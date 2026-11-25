@@ -1,0 +1,17 @@
+{
+  "name": "cc-advanced",
+  "version": "0.4.0",
+  "description": "Advanced Claude Code tutor: MCP, subagents, hooks, building and publishing skills and plugins, -p, --bare and GitHub Actions automation, and worktrees, in the learner's language. Checks Intermediate completion first. (Claude Code 고급 튜터)",
+  "author": {
+    "name": "sanh09"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/sanh09/code-guide-protocol/tree/main/plugins/cc-advanced",
+  "repository": "https://github.com/sanh09/code-guide-protocol",
+  "keywords": [
+    "claude-code",
+    "tutorial",
+    "multilingual",
+    "advanced"
+  ]
+}

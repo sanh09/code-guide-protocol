@@ -2,15 +2,15 @@
 
 **English** | [한국어](README.ko.md)
 
-> **Reply language**: every tutor replies in the language the learner writes in (English, Korean, Japanese, and so on). The `-ko` suffix in the skill names is kept from the original names so that existing installs keep working.
+> **Reply language**: every tutor replies in the language the learner writes in (English, Korean, Japanese, and so on).
 
 Tutor skills that teach Claude Code **one step at a time**. Each course is made of tutorials, hands-on exercises, and quizzes.
 
 | Course | Plugin | For | Covers |
 |---|---|---|---|
-| Basics | `cc-basics-ko` | People new to the terminal and coding | First conversation, input prefixes (`/` `!` `@`) and shortcuts, managing a conversation (`/clear` `/compact` `/resume` `/rewind`), permissions and modes, `CLAUDE.md`, `settings.json` |
-| Intermediate | `cc-intermediate-ko` | Developers, or people who finished Basics | Writing good requests, explore → plan → implement → commit (plan mode), git, PRs and checkpoints, permission rules in depth, your own slash commands (skills), session and context management, `claude -p` |
-| Advanced | `cc-advanced-ko` | People who finished Intermediate or passed its check quiz | Choosing an extension type, MCP, subagents, hooks, building and publishing skills and plugins, `--bare`, CI and GitHub Actions automation, parallel work with worktrees and review |
+| Basics | `cc-basics` | People new to the terminal and coding | First conversation, input prefixes (`/` `!` `@`) and shortcuts, managing a conversation (`/clear` `/compact` `/resume` `/rewind`), permissions and modes, `CLAUDE.md`, `settings.json` |
+| Intermediate | `cc-intermediate` | Developers, or people who finished Basics | Writing good requests, explore → plan → implement → commit (plan mode), git, PRs and checkpoints, permission rules in depth, your own slash commands (skills), session and context management, `claude -p` |
+| Advanced | `cc-advanced` | People who finished Intermediate or passed its check quiz | Choosing an extension type, MCP, subagents, hooks, building and publishing skills and plugins, `--bare`, CI and GitHub Actions automation, parallel work with worktrees and review |
 
 ## Level checks (Intermediate and Advanced)
 
@@ -26,18 +26,18 @@ Inside Claude Code:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-basics-ko@sanh09-skills
-/plugin install cc-intermediate-ko@sanh09-skills
-/plugin install cc-advanced-ko@sanh09-skills
+/plugin install cc-basics@sanh09-skills
+/plugin install cc-intermediate@sanh09-skills
+/plugin install cc-advanced@sanh09-skills
 ```
 
 Or from a terminal:
 
 ```bash
 claude plugin marketplace add sanh09/code-guide-protocol
-claude plugin install cc-basics-ko@sanh09-skills
-claude plugin install cc-intermediate-ko@sanh09-skills
-claude plugin install cc-advanced-ko@sanh09-skills
+claude plugin install cc-basics@sanh09-skills
+claude plugin install cc-intermediate@sanh09-skills
+claude plugin install cc-advanced@sanh09-skills
 ```
 
 You can install only the courses you need.
@@ -71,7 +71,7 @@ curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/ins
 | `--uninstall` | Delete the installed skill folders (your progress record stays) |
 
 - Update: run the same command again to overwrite with the latest version.
-- After installing, restart Claude Code and call `/cc-basics-ko`, `/cc-intermediate-ko`, or `/cc-advanced-ko`, or just ask in your own words.
+- After installing, restart Claude Code and call `/cc-basics`, `/cc-intermediate`, or `/cc-advanced`, or just ask in your own words.
 - Use **either** the plugin or curl, not both. With both, the same skill shows up twice.
 - You can read the script before running it: `curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | less`
 - On Windows, run it in WSL or Git Bash, or use the plugin method above.
@@ -88,7 +88,7 @@ Say something like this in Claude Code and the right skill starts:
 - Intermediate: "Start the Claude Code intermediate course", "How do I use plan mode well?", "How do I write permission rules?"
 - Advanced: "How do I connect an MCP server?", "I want to set up hooks", "How do I build and publish a plugin?"
 
-To call a skill directly, type `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-ko:cc-intermediate-ko`, or `/cc-advanced-ko:cc-advanced-ko` if you installed the plugins, or `/cc-basics-ko`, `/cc-intermediate-ko`, `/cc-advanced-ko` if you installed with curl.
+To call a skill directly, type `/cc-basics:cc-basics`, `/cc-intermediate:cc-intermediate`, or `/cc-advanced:cc-advanced` if you installed the plugins, or `/cc-basics`, `/cc-intermediate`, `/cc-advanced` if you installed with curl.
 
 ## What the plugins do on your machine
 
@@ -102,9 +102,9 @@ To call a skill directly, type `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-k
 install.sh                             curl install script
 .claude-plugin/marketplace.json        marketplace definition (sanh09-skills)
 plugins/
-  cc-basics-ko/                        Basics
-  cc-intermediate-ko/                  Intermediate
-  cc-advanced-ko/                      Advanced
+  cc-basics/                        Basics
+  cc-intermediate/                  Intermediate
+  cc-advanced/                      Advanced
     .claude-plugin/plugin.json
     README.md, README.ko.md, LICENSE
     skills/<name>/
@@ -121,11 +121,30 @@ plugins/
 Run this in a skill folder to compare the test cases with and without the skill (it calls the model, so it costs usage):
 
 ```bash
-cd plugins/cc-intermediate-ko/skills/cc-intermediate-ko
+cd plugins/cc-intermediate/skills/cc-intermediate
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```
 
 ## Release notes
+
+### 2026-11-25: `-ko` dropped from the names (action needed)
+- The plugins and skills are renamed: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. The tutors still reply in the learner's language.
+- Progress records saved under the old names are still recognized.
+- Versions: `cc-basics` 0.5.0, `cc-intermediate` 0.4.0, `cc-advanced` 0.4.0
+
+**If you installed the old names, reinstall** (the update command can't move you to a new name):
+- Plugins: run these in a terminal, then restart Claude Code.
+  ```bash
+  claude plugin uninstall cc-basics-ko@sanh09-skills
+  claude plugin uninstall cc-intermediate-ko@sanh09-skills
+  claude plugin uninstall cc-advanced-ko@sanh09-skills
+  claude plugin marketplace update sanh09-skills
+  claude plugin install cc-basics@sanh09-skills
+  claude plugin install cc-intermediate@sanh09-skills
+  claude plugin install cc-advanced@sanh09-skills
+  ```
+  Uninstall only the ones you had, and install only the courses you want.
+- curl install: run the install command again. It removes the old `-ko` folders for you.
 
 ### 2026-11-25: English README and license
 - The README is now in English by default, with the Korean version in [README.ko.md](README.ko.md). Each plugin folder has its own README and LICENSE.
