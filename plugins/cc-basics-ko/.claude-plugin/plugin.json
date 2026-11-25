@@ -1,7 +1,7 @@
 {
   "name": "cc-basics-ko",
-  "version": "0.3.0",
-  "description": "완전 초보자를 위한 한국어 Claude Code 기초 튜터: 슬래시 명령, 단축키, CLAUDE.md, settings.json을 단계별 튜토리얼·실습·퀴즈로 가르칩니다.",
+  "version": "0.4.0",
+  "description": "Claude Code 기초 튜터(학습자가 쓰는 언어로 응답): 슬래시 명령, 단축키, CLAUDE.md, settings.json을 단계별 튜토리얼·실습·퀴즈로 가르칩니다. Beginner Claude Code tutor that replies in the learner's language.",
   "author": {
     "name": "sanh09"
   },
