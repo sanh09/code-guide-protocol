@@ -6,13 +6,13 @@
 
 | 저장소 | 스킬 | 사실 파일 |
 |---|---|---|
-| sanh09/code-guide-protocol | `cc-basics-ko`, `cc-intermediate-ko`, `cc-advanced-ko` | `plugins/<스킬>/skills/<스킬>/references/facts.md` |
-| sanh09/guide-protocol | `cc-basics-ko-app`, `cc-intermediate-ko-app`, `cc-advanced-ko-app` | `skills/<스킬>/references/facts.md` |
-| sanh09/app-guide-plugin | `ai-chat-guide-ko` (이 저장소에서만 관리) | `plugins/ai-chat-guide-ko/skills/ai-chat-guide-ko/references/facts.md` |
+| sanh09/code-guide-protocol | `cc-basics`, `cc-intermediate`, `cc-advanced` | `plugins/<스킬>/skills/<스킬>/references/facts.md` |
+| sanh09/guide-protocol | `cc-basics-app`, `cc-intermediate-app`, `cc-advanced-app` | `skills/<스킬>/references/facts.md` |
+| sanh09/app-guide-plugin | `ai-chat-guide` (이 저장소에서만 관리) | `plugins/ai-chat-guide/skills/ai-chat-guide/references/facts.md` |
 
 짝을 이루는 파일은 같은 사실을 담아야 한다.
-- `cc-X-ko`(code-guide-protocol) ↔ `cc-X-ko-app`(guide-protocol)의 `facts.md`와 `curriculum.md`. 단, 앱 버전 curriculum에서는 학습 기록 파일(`cc-tutor-progress.md`) 관련 문장을 뺐다. 그 차이는 유지한다.
-- `ai-chat-guide-ko`는 app-guide-plugin에만 있다. 짝이 되는 파일이 없다.
+- `cc-X`(code-guide-protocol) ↔ `cc-X-app`(guide-protocol)의 `facts.md`와 `curriculum.md`. 단, 앱 버전 curriculum에서는 학습 기록 파일(`cc-tutor-progress.md`) 관련 문장을 뺐다. 그 차이는 유지한다.
+- `ai-chat-guide`는 app-guide-plugin에만 있다. 짝이 되는 파일이 없다.
 
 ## 1. 상태 확인
 
@@ -47,7 +47,7 @@
 ## 5. 버전·빌드·검증
 
 - code-guide-protocol: 바뀐 플러그인의 `plugins/<스킬>/.claude-plugin/plugin.json`의 `version` 패치 번호를 올린다(예: 0.1.2 → 0.1.3).
-- app-guide-plugin: `plugins/ai-chat-guide-ko/.claude-plugin/plugin.json`의 `version`을 올린다.
+- app-guide-plugin: `plugins/ai-chat-guide/.claude-plugin/plugin.json`의 `version`을 올린다.
 - guide-protocol, app-guide-plugin: `bash scripts/build-dist.sh`로 `dist/` zip을 다시 만든다.
 - `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) icon 경고는 무시한다.
 - Anthropic 디렉터리 제출 요건을 지킨다: 각 플러그인 폴더에 `README.md`(코드 블록 제외 40단어 이상)와 `LICENSE`를 유지하고, 플러그인 폴더 안에 zip·pdf 같은 바이너리나 256KiB가 넘는 파일을 넣지 않는다. 플러그인 폴더 안의 내용을 바꾸면 반드시 `version`을 올린다(디렉터리가 `main`의 새 커밋을 새 버전으로 검사한다).

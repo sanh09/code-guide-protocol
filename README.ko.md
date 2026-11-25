@@ -2,16 +2,16 @@
 
 [English](README.md) | **한국어**
 
-> **응답 언어**: 모든 튜터는 학습자가 쓰는 언어(한국어, 영어, 일본어 등)로 답합니다. 스킬 이름의 `-ko`는 처음 만든 이름을 그대로 둔 것입니다. All tutors reply in the learner's language.
+> **응답 언어**: 모든 튜터는 학습자가 쓰는 언어(한국어, 영어, 일본어 등)로 답합니다. All tutors reply in the learner's language.
 
 
 Claude Code를 **한 단계씩** 배우는 튜터 스킬 모음입니다. 각 과정은 튜토리얼, 실습 과제, 퀴즈로 구성되어 있습니다.
 
 | 과정 | 플러그인 | 대상 | 다루는 내용 |
 |---|---|---|---|
-| 기초 | `cc-basics-ko` | 터미널·코딩이 처음인 사람 | 첫 대화, 입력 기호(`/` `!` `@`)와 단축키, 대화 관리(`/clear` `/compact` `/resume` `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json` |
-| 중급 | `cc-intermediate-ko` | 개발 경험자 또는 기초 수료자 | 좋은 요청 쓰기, 탐색→계획→구현→커밋(plan 모드), git·PR·체크포인트, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션·컨텍스트 관리, `claude -p` |
-| 고급 | `cc-advanced-ko` | 중급 수료자 또는 확인 퀴즈 통과자 | 확장 기능 고르기, MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, `--bare`·CI·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 |
+| 기초 | `cc-basics` | 터미널·코딩이 처음인 사람 | 첫 대화, 입력 기호(`/` `!` `@`)와 단축키, 대화 관리(`/clear` `/compact` `/resume` `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json` |
+| 중급 | `cc-intermediate` | 개발 경험자 또는 기초 수료자 | 좋은 요청 쓰기, 탐색→계획→구현→커밋(plan 모드), git·PR·체크포인트, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션·컨텍스트 관리, `claude -p` |
+| 고급 | `cc-advanced` | 중급 수료자 또는 확인 퀴즈 통과자 | 확장 기능 고르기, MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, `--bare`·CI·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 |
 
 ## 수준 확인 (중급·고급)
 
@@ -27,18 +27,18 @@ Claude Code 안에서:
 
 ```
 /plugin marketplace add sanh09/code-guide-protocol
-/plugin install cc-basics-ko@sanh09-skills
-/plugin install cc-intermediate-ko@sanh09-skills
-/plugin install cc-advanced-ko@sanh09-skills
+/plugin install cc-basics@sanh09-skills
+/plugin install cc-intermediate@sanh09-skills
+/plugin install cc-advanced@sanh09-skills
 ```
 
 또는 터미널에서:
 
 ```bash
 claude plugin marketplace add sanh09/code-guide-protocol
-claude plugin install cc-basics-ko@sanh09-skills
-claude plugin install cc-intermediate-ko@sanh09-skills
-claude plugin install cc-advanced-ko@sanh09-skills
+claude plugin install cc-basics@sanh09-skills
+claude plugin install cc-intermediate@sanh09-skills
+claude plugin install cc-advanced@sanh09-skills
 ```
 
 필요한 과정만 골라 설치해도 됩니다.
@@ -72,7 +72,7 @@ curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/ins
 | `--uninstall` | 설치한 스킬 폴더 삭제 (학습 기록은 남김) |
 
 - 업데이트: 같은 명령을 다시 실행하면 최신 버전으로 덮어씁니다.
-- 설치 뒤 Claude Code를 새로 켜고, `/cc-basics-ko`, `/cc-intermediate-ko`, `/cc-advanced-ko`로 부르거나 그냥 말로 요청하세요.
+- 설치 뒤 Claude Code를 새로 켜고, `/cc-basics`, `/cc-intermediate`, `/cc-advanced`로 부르거나 그냥 말로 요청하세요.
 - 플러그인 방식과 curl 방식 중 **하나만** 쓰세요. 둘 다 설치하면 같은 스킬이 두 번 보입니다.
 - 스크립트는 실행 전에 내용을 확인할 수 있어요: `curl -fsSL https://raw.githubusercontent.com/sanh09/code-guide-protocol/main/install.sh | less`
 - Windows에서는 WSL이나 Git Bash에서 실행하거나, 위의 플러그인 방식을 쓰세요.
@@ -89,7 +89,7 @@ Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니
 - 중급: "Claude Code 중급 시작할래요", "plan 모드 잘 쓰는 법", "권한 규칙 쓰는 법"
 - 고급: "MCP 서버 연결하는 법", "훅 설정하고 싶어요", "플러그인 만들어서 배포하기"
 
-직접 부르려면 플러그인으로 설치한 경우 `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-ko:cc-intermediate-ko`, `/cc-advanced-ko:cc-advanced-ko`를, curl로 설치한 경우 `/cc-basics-ko`, `/cc-intermediate-ko`, `/cc-advanced-ko`를 입력하세요.
+직접 부르려면 플러그인으로 설치한 경우 `/cc-basics:cc-basics`, `/cc-intermediate:cc-intermediate`, `/cc-advanced:cc-advanced`를, curl로 설치한 경우 `/cc-basics`, `/cc-intermediate`, `/cc-advanced`를 입력하세요.
 
 ## 내 컴퓨터에서 하는 일
 
@@ -103,9 +103,9 @@ Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니
 install.sh                             curl 설치 스크립트
 .claude-plugin/marketplace.json        마켓플레이스 정의 (sanh09-skills)
 plugins/
-  cc-basics-ko/                        기초
-  cc-intermediate-ko/                  중급
-  cc-advanced-ko/                      고급
+  cc-basics/                        기초
+  cc-intermediate/                  중급
+  cc-advanced/                      고급
     .claude-plugin/plugin.json
     README.md, README.ko.md, LICENSE
     skills/<이름>/
@@ -122,11 +122,30 @@ plugins/
 각 스킬 폴더에서 다음 명령을 실행하면 테스트 케이스를 스킬 있음/없음으로 비교합니다(실제 모델 호출이라 비용이 듭니다).
 
 ```bash
-cd plugins/cc-intermediate-ko/skills/cc-intermediate-ko
+cd plugins/cc-intermediate/skills/cc-intermediate
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```
 
 ## 업데이트 내역
+
+### 2026-11-25: 이름에서 `-ko` 제거 (재설치 필요)
+- 플러그인과 스킬 이름을 바꿨습니다: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. 학습자가 쓰는 언어로 답하는 것은 그대로입니다.
+- 예전 이름으로 저장된 학습 기록도 그대로 인정합니다.
+- 버전: `cc-basics` 0.5.0, `cc-intermediate` 0.4.0, `cc-advanced` 0.4.0
+
+**예전 이름으로 설치했다면 다시 설치하세요** (업데이트 명령으로는 새 이름으로 바뀌지 않습니다):
+- 플러그인: 터미널에서 실행한 뒤 Claude Code를 다시 켜세요.
+  ```bash
+  claude plugin uninstall cc-basics-ko@sanh09-skills
+  claude plugin uninstall cc-intermediate-ko@sanh09-skills
+  claude plugin uninstall cc-advanced-ko@sanh09-skills
+  claude plugin marketplace update sanh09-skills
+  claude plugin install cc-basics@sanh09-skills
+  claude plugin install cc-intermediate@sanh09-skills
+  claude plugin install cc-advanced@sanh09-skills
+  ```
+  설치했던 것만 지우고, 원하는 과정만 설치하면 됩니다.
+- curl 설치: 설치 명령을 다시 실행하세요. 예전 `-ko` 폴더는 자동으로 지워집니다.
 
 ### 2026-11-25: 영어 README와 라이선스
 - README 기본 언어를 영어로 바꾸고, 한국어는 이 파일(README.ko.md)에서 볼 수 있습니다. 각 플러그인 폴더에도 README와 LICENSE를 넣었습니다.

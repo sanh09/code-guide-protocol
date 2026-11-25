@@ -58,9 +58,9 @@ done
 
 skill_name() {
   case "$1" in
-    basics) echo "cc-basics-ko" ;;
-    intermediate) echo "cc-intermediate-ko" ;;
-    advanced) echo "cc-advanced-ko" ;;
+    basics) echo "cc-basics" ;;
+    intermediate) echo "cc-intermediate" ;;
+    advanced) echo "cc-advanced" ;;
   esac
 }
 
@@ -79,6 +79,11 @@ if [ "$action" = "uninstall" ]; then
       say "삭제함: $dest/$name"
     else
       say "없음(건너뜀): $dest/$name"
+    fi
+    # 예전 이름(-ko)으로 설치된 폴더도 함께 지운다
+    if [ -f "$dest/$name-ko/SKILL.md" ]; then
+      rm -rf "${dest:?}/$name-ko"
+      say "삭제함(예전 이름): $dest/$name-ko"
     fi
   done
   say "학습 기록(~/.claude/cc-tutor-progress.md)은 남겨 두었어요. 필요 없으면 직접 지우세요."
@@ -111,6 +116,11 @@ for lv in "${levels[@]}"; do
   from="$src/plugins/$name/skills/$name"
   [ -f "$from/SKILL.md" ] || fail "스킬을 찾지 못했어요: $from"
   rm -rf "${dest:?}/$name"
+  # 예전 이름(-ko)으로 설치된 폴더가 있으면 지운다. 남아 있으면 같은 스킬이 두 번 보인다.
+  if [ -f "$dest/$name-ko/SKILL.md" ]; then
+    rm -rf "${dest:?}/$name-ko"
+    say "예전 이름 폴더를 지웠어요: $dest/$name-ko"
+  fi
   mkdir -p "$dest/$name"
   # 테스트 케이스(evals)는 사용자에게 필요 없으므로 빼고 복사
   (cd "$from" && tar --exclude='./evals' -cf - .) | (cd "$dest/$name" && tar -xf -)
@@ -119,5 +129,5 @@ done
 
 say ""
 say "설치를 마쳤어요. Claude Code를 새로 켜면 바로 쓸 수 있어요."
-say "  예) \"클로드 코드 처음이에요. 처음부터 알려주세요\" 또는 /cc-basics-ko"
+say "  예) \"클로드 코드 처음이에요. 처음부터 알려주세요\" 또는 /cc-basics"
 say "같은 과정을 플러그인(/plugin install)으로도 설치했다면 하나만 남겨 두세요. 둘 다 있으면 같은 스킬이 두 번 보여요."

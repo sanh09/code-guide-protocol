@@ -2,6 +2,14 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-25 (이름에서 -ko 제거)
+- 이름 변경: cc-basics-ko → cc-basics, cc-intermediate-ko → cc-intermediate, cc-advanced-ko → cc-advanced, ai-chat-guide-ko → ai-chat-guide, cc-*-ko-app → cc-*-app. 폴더 경로와 dist zip 이름도 바뀜.
+- 학습 기록: 예전 이름으로 적힌 기록도 같은 과정으로 인정(SKILL.md·gating.md).
+- install.sh: 설치·삭제할 때 예전 `-ko` 폴더를 함께 지움.
+- README 업데이트 내역에 재설치 방법 안내. 이전 업데이트 내역의 예전 이름은 기록으로 남김.
+- 버전: cc-basics 0.5.0, cc-intermediate 0.4.0, cc-advanced 0.4.0, ai-chat-guide 0.4.0.
+- 저장소: code-guide-protocol, guide-protocol, app-guide-plugin.
+
 ## 2026-11-25 (디렉터리 아이콘)
 - 플러그인 4개에 `.claude-plugin/icon.png`(1024px PNG) 추가. Claude Code 과정은 터미널 `>_`와 단계 막대(기초 초록·중급 파랑·고급 보라), 앱 사용법은 주황 말풍선. 디렉터리 아이콘은 처음 제출할 때 한 번만 등록된다.
 - 버전: cc-basics-ko 0.4.2, cc-intermediate-ko 0.3.2, cc-advanced-ko 0.3.2, ai-chat-guide-ko 0.3.3.
