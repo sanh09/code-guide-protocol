@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: quiz-for-dev-without-intermediate
+expected_outcome: |
+  The reply gives the 5-question intermediate check quiz before teaching hooks; The quiz answers are not revealed in the reply; The reply states the pass condition (4 or more out of 5); The reply does not send the learner to the basics course; The reply is written in Korean

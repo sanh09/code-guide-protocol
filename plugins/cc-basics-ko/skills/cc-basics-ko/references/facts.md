@@ -26,7 +26,7 @@ Claude Code는 자주 업데이트된다. 여기와 학습자 화면이 다르�
 | `Esc` 두 번 | 입력 중이면 입력 지우기(기록에 저장되어 `↑`로 되돌릴 수 있음). 입력이 비어 있으면 되감기(rewind) 메뉴 |
 | `Ctrl+C` | 실행 중인 작업 중단. 아무것도 실행 중이 아니면 첫 번째는 입력 지우기, 두 번째는 종료 |
 | `Ctrl+D` | 세션 종료(두 번 눌러 확인) |
-| `Shift+Tab` | 권한 모드 순환: `default`(화면 표시는 Manual) → `acceptEdits` → `plan` → (가능할 때) 그 밖의 모드 |
+| `Shift+Tab` | 권한 모드 순환: `default`(Manual) → `acceptEdits` → `plan` → (가능할 때) `bypassPermissions` → `auto`. `auto`에서 누르면 `default`로 |
 | `↑` / `↓` | 이전 입력 기록 탐색 |
 | `Ctrl+R` | 입력 기록 검색 |
 | `Ctrl+O` | 자세한 작업 내역(transcript) 보기 |
@@ -57,10 +57,23 @@ Claude Code는 자주 업데이트된다. 여기와 학습자 화면이 다르�
 | `/exit` | 종료 (별칭: `/quit`) |
 
 ## 권한 모드 (Shift+Tab으로 전환)
-- `default` (Manual): 파일 수정·명령 실행 전에 매번 물어봄. 초보자 추천.
-- `acceptEdits`: 파일 수정은 묻지 않고 바로 적용.
-- `plan`: 계획 모드. 파일을 바꾸지 않고 먼저 계획을 세워 보여줌.
-- `bypassPermissions` 등: 묻지 않고 진행하는 위험한 모드. 초보자에게 권하지 않음.
+출처: https://code.claude.com/docs/en/permission-modes.md
+
+**중요: v2.1.283부터 터미널·VS Code 대화형 세션은 기본적으로 `auto` 모드로 시작한다.** 그래서 학습자 화면에서는 권한 요청 창이 거의 안 뜰 수 있다. 화면 아래 상태 표시줄로 현재 모드를 확인시킨다.
+
+| 모드 | 상태 표시줄 | 뜻 |
+|---|---|---|
+| `default` (Manual) | `⏸ manual mode on` | 파일 수정·명령 실행 전에 물어봄. 권한 요청을 직접 보며 배우기 좋음 |
+| `acceptEdits` | `⏵⏵ accept edits on` | 파일 수정과 `mkdir`·`cp` 같은 흔한 파일 명령은 묻지 않음 |
+| `plan` | `⏸ plan mode on` | 파일을 바꾸지 않고 읽고 계획만 세움 |
+| `auto` | `⏵⏵ auto mode on` | 별도 검사 모델이 각 작업을 미리 검토해서 일상적인 확인 창을 건너뜀. 요청 범위를 넘거나 위험해 보이는 작업은 막음. 확인 창은 줄지만 안전을 보장하지는 않음 |
+| `bypassPermissions` | `⏵⏵ bypass permissions on` | 거의 묻지 않고 진행. 위험, 초보자에게 권하지 않음 |
+
+- 학습 중 권한 요청을 직접 보고 싶다면 `Shift+Tab`으로 Manual(`⏸ manual mode on`)로 바꾸면 된다.
+- 항상 Manual로 시작하게 하려면 `~/.claude/settings.json`에:
+  ```json
+  { "permissions": { "defaultMode": "default" } }
+  ```
 
 권한 요청에서 "Yes, and don't ask again"을 고르면 그 허용 규칙이 `.claude/settings.local.json`에 저장된다.
 

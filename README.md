@@ -1,68 +1,83 @@
-# cc-basics-ko: 한국어 Claude Code 기초 튜터
+# claude-guide: 한국어 Claude Code 학습 과정 (기초 · 중급 · 고급)
 
-터미널과 코딩이 처음인 사람에게 Claude Code 기초를 **한국어로, 한 단계씩** 가르치는 Claude Code 스킬입니다.
+Claude Code를 **한국어로, 한 단계씩** 배우는 튜터 스킬 모음입니다. 각 과정은 튜토리얼, 실습 과제, 퀴즈로 구성되어 있습니다.
 
-- 단계별 튜토리얼: 한 번에 개념 1~3개와 바로 해 볼 실습 1개
-- 퀴즈: 상황 판단형 객관식, 정답은 답을 보낸 뒤 공개
-- 다루는 범위: 기본 대화, 입력 기호(`/`, `!`, `@`)와 단축키, 대화 관리(`/clear`, `/compact`, `/resume`, `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json`
-- 명령어·경로 정보는 공식 문서(https://code.claude.com/docs)로 확인한 내용이 `references/facts.md`에 정리되어 있습니다 (2026-11 기준)
+| 과정 | 플러그인 | 대상 | 다루는 내용 |
+|---|---|---|---|
+| 기초 | `cc-basics-ko` | 터미널·코딩이 처음인 사람 | 첫 대화, 입력 기호(`/` `!` `@`)와 단축키, 대화 관리(`/clear` `/compact` `/resume` `/rewind`), 권한과 모드, `CLAUDE.md`, `settings.json` |
+| 중급 | `cc-intermediate-ko` | 개발 경험자 또는 기초 수료자 | 좋은 요청 쓰기, 탐색→계획→구현→커밋(plan 모드), git·PR·체크포인트, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션·컨텍스트 관리, `claude -p` |
+| 고급 | `cc-advanced-ko` | 중급 수료자 또는 확인 퀴즈 통과자 | 확장 기능 고르기, MCP, 서브에이전트, 훅, 스킬·플러그인 제작과 배포, `--bare`·CI·GitHub Actions 자동화, worktree 병렬 작업과 리뷰 |
+
+## 수준 확인 (중급·고급)
+
+- **중급**: 시작할 때 개발 경험을 묻습니다. 개발 경험이 있으면 바로 시작합니다. 없으면 기초 수료를 확인하고, 수료하지 않았다면 기초 과정으로 안내합니다. 수료했지만 기록이 없다면 확인 퀴즈(5문제 중 4문제 이상)로 확인합니다.
+- **고급**: 중급 수료를 확인합니다. 개발 경험이 있으면 중급 확인 퀴즈를 통과해도 시작할 수 있습니다. 개발 경험이 없으면 기초 → 중급 순서로 수료해야 합니다.
+- 학습 기록은 동의를 받은 뒤 `~/.claude/cc-tutor-progress.md`에 저장되며, 세 과정이 같이 씁니다.
+
+명령어·경로·설정 정보는 공식 문서(https://code.claude.com/docs)로 확인한 내용이 각 스킬의 `references/facts.md`에 정리되어 있습니다(2026-11 기준).
 
 ## 설치
-
-### 방법 1. 플러그인으로 설치 (추천, 업데이트 받기 쉬움)
 
 Claude Code 안에서:
 
 ```
-/plugin marketplace add sanh09/basic-claude
+/plugin marketplace add sanh09/claude-guide
 /plugin install cc-basics-ko@sanh09-skills
+/plugin install cc-intermediate-ko@sanh09-skills
+/plugin install cc-advanced-ko@sanh09-skills
 ```
 
 또는 터미널에서:
 
 ```bash
-claude plugin marketplace add sanh09/basic-claude
+claude plugin marketplace add sanh09/claude-guide
 claude plugin install cc-basics-ko@sanh09-skills
+claude plugin install cc-intermediate-ko@sanh09-skills
+claude plugin install cc-advanced-ko@sanh09-skills
 ```
 
-### 방법 2. 스킬 폴더만 복사
+필요한 과정만 골라 설치해도 됩니다.
+
+### 플러그인 없이 스킬 폴더만 복사하기
 
 ```bash
-git clone https://github.com/sanh09/basic-claude.git
+git clone https://github.com/sanh09/claude-guide.git
 mkdir -p ~/.claude/skills
-cp -r basic-claude/plugins/cc-basics-ko/skills/cc-basics-ko ~/.claude/skills/
+cp -r claude-guide/plugins/*/skills/* ~/.claude/skills/
 ```
-
-특정 프로젝트에서만 쓰려면 `~/.claude/skills/` 대신 그 프로젝트의 `.claude/skills/`에 복사하세요.
 
 ## 사용법
 
-Claude Code를 켜고 이렇게 말하면 스킬이 자동으로 쓰입니다.
+Claude Code에서 이렇게 말하면 알맞은 스킬이 자동으로 쓰입니다.
 
-- "클로드 코드 처음이에요. 처음부터 알려주세요"
-- "/compact랑 /clear 차이가 뭐예요?"
-- "CLAUDE.md 퀴즈 내주세요"
+- 기초: "클로드 코드 처음이에요. 처음부터 알려주세요", "CLAUDE.md 퀴즈 내주세요"
+- 중급: "Claude Code 중급 시작할래요", "plan 모드 잘 쓰는 법", "권한 규칙 쓰는 법"
+- 고급: "MCP 서버 연결하는 법", "훅 설정하고 싶어요", "플러그인 만들어서 배포하기"
 
-직접 부르려면 `/cc-basics-ko`를 입력하세요(플러그인으로 설치했다면 `/cc-basics-ko:cc-basics-ko`).
+직접 부르려면 `/cc-basics-ko:cc-basics-ko`, `/cc-intermediate-ko:cc-intermediate-ko`, `/cc-advanced-ko:cc-advanced-ko`를 입력하세요.
 
 ## 구조
 
 ```
-.claude-plugin/marketplace.json           마켓플레이스 정의 (sanh09-skills)
-plugins/cc-basics-ko/
-  .claude-plugin/plugin.json              플러그인 정의
-  skills/cc-basics-ko/
-    SKILL.md                              튜터 규칙
-    references/curriculum.md              레슨 1~6, 실습, 퀴즈 문제 은행
-    references/facts.md                   공식 문서로 확인한 명령어·설정 정리
-    evals/                                테스트 케이스 (claude plugin eval 형식)
+.claude-plugin/marketplace.json        마켓플레이스 정의 (sanh09-skills)
+plugins/
+  cc-basics-ko/                        기초
+  cc-intermediate-ko/                  중급
+  cc-advanced-ko/                      고급
+    .claude-plugin/plugin.json
+    skills/<이름>/
+      SKILL.md                         튜터 규칙
+      references/curriculum.md         레슨, 실습, 퀴즈 문제 은행
+      references/facts.md              공식 문서로 확인한 사실 정리
+      references/gating.md             수준 확인 절차 (중급·고급)
+      evals/                           테스트 케이스 (claude plugin eval 형식)
 ```
 
 ## 테스트
 
-스킬 폴더에서 다음을 실행하면 테스트 케이스를 스킬 있음/없음으로 비교합니다 (실제 모델 호출이라 비용이 듭니다).
+각 스킬 폴더에서 다음 명령을 실행하면 테스트 케이스를 스킬 있음/없음으로 비교합니다(실제 모델 호출이라 비용이 듭니다).
 
 ```bash
-cd plugins/cc-basics-ko/skills/cc-basics-ko
+cd plugins/cc-intermediate-ko/skills/cc-intermediate-ko
 claude plugin eval . --allow-tools Write,Edit,Bash
 ```

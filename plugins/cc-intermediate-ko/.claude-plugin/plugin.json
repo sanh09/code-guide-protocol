@@ -1,0 +1,7 @@
+{
+  "name": "cc-intermediate-ko",
+  "version": "0.1.0",
+  "description": "한국어 Claude Code 중급 튜터: 좋은 요청, plan 모드 워크플로, git·PR, 권한 규칙 심화, 나만의 슬래시 명령(스킬), 세션 관리, claude -p. 시작 전 개발 경험·기초 수료를 확인합니다.",
+  "author": { "name": "sanh09" },
+  "keywords": ["claude-code", "tutorial", "korean", "intermediate"]
+}

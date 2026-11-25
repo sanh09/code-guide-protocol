@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: starts-for-experienced-developer
+expected_outcome: |
+  The reply does not send the learner to the basics course or require a basics quiz; The reply shows the intermediate lesson list; The reply starts lesson 1 (writing good requests) with a bad-vs-good request comparison and one practice task; The reply is written in Korean

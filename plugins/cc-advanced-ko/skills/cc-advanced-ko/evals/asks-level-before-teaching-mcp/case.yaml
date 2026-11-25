@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: asks-level-before-teaching-mcp
+expected_outcome: |
+  The reply asks about development experience and intermediate-course completion before teaching; The reply does not yet give the MCP lesson content (e.g. claude mcp add commands); The reply is written in Korean

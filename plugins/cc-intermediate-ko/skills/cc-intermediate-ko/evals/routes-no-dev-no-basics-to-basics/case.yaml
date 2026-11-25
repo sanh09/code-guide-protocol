@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: routes-no-dev-no-basics-to-basics
+expected_outcome: |
+  The reply does not teach plan mode or any intermediate lesson content; The reply explains briefly why the basics course comes first; The reply tells the learner how to start the basics course (cc-basics-ko), including the install command or how to invoke it; The reply is written in Korean and is encouraging rather than a cold refusal
