@@ -14,23 +14,23 @@
 Claude Code 안에서:
 
 ```
-/plugin marketplace add sanh09/<저장소-이름>
+/plugin marketplace add sanh09/basic-claude
 /plugin install cc-basics-ko@sanh09-skills
 ```
 
 또는 터미널에서:
 
 ```bash
-claude plugin marketplace add sanh09/<저장소-이름>
+claude plugin marketplace add sanh09/basic-claude
 claude plugin install cc-basics-ko@sanh09-skills
 ```
 
 ### 방법 2. 스킬 폴더만 복사
 
 ```bash
-git clone https://github.com/sanh09/<저장소-이름>.git
+git clone https://github.com/sanh09/basic-claude.git
 mkdir -p ~/.claude/skills
-cp -r <저장소-이름>/plugins/cc-basics-ko/skills/cc-basics-ko ~/.claude/skills/
+cp -r basic-claude/plugins/cc-basics-ko/skills/cc-basics-ko ~/.claude/skills/
 ```
 
 특정 프로젝트에서만 쓰려면 `~/.claude/skills/` 대신 그 프로젝트의 `.claude/skills/`에 복사하세요.
