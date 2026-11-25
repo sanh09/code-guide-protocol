@@ -164,4 +164,4 @@ The update procedure for Claude and Claude Code releases, and its records, are i
 
 ## License
 
-See the `LICENSE` file in each plugin folder.
+MIT. See [`LICENSE`](LICENSE); each plugin folder also has its own copy.

@@ -49,4 +49,4 @@ Then restart Claude Code and say what you want to learn, or type `/cc-intermedia
 
 Source, release notes, and other courses: https://github.com/sanh09/code-guide-protocol
 
-License: see [LICENSE](LICENSE).
+License: MIT. See [LICENSE](LICENSE).

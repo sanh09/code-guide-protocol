@@ -165,4 +165,4 @@ Claude·Claude Code 업데이트에 맞춘 갱신 절차와 기록은 [`maintena
 
 ## 라이선스
 
-각 플러그인 폴더의 `LICENSE` 파일을 보세요.
+MIT 라이선스입니다. [`LICENSE`](LICENSE)를 보세요(각 플러그인 폴더에도 같은 파일이 있습니다).

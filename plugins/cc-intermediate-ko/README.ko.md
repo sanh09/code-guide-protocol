@@ -49,4 +49,4 @@ Claude Code에서:
 
 소스, 업데이트 내역, 다른 과정: https://github.com/sanh09/code-guide-protocol
 
-라이선스: [LICENSE](LICENSE)를 보세요.
+라이선스: MIT. [LICENSE](LICENSE)를 보세요.
