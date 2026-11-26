@@ -1,6 +1,6 @@
 {
   "name": "codeguide-advanced",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "Advanced Claude Code tutor: MCP, subagents, hooks, building and publishing skills and plugins, -p, --bare and GitHub Actions automation, and worktrees, in the learner's language. Checks Intermediate completion first. (Claude Code 고급 튜터)",
   "author": {
     "name": "sanh09"

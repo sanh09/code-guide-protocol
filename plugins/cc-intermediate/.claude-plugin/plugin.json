@@ -1,6 +1,6 @@
 {
   "name": "codeguide-intermediate",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Intermediate Claude Code tutor: good requests, the plan-mode workflow, git and PRs, permission rules, your own slash commands, session management, and claude -p, in the learner's language. Checks experience or Basics completion first. (Claude Code 중급 튜터)",
   "author": {
     "name": "sanh09"
