@@ -44,4 +44,4 @@ The plugin contains one skill, `cc-basics`. Then restart Claude Code and say wha
 
 Source, release notes, and other courses: https://github.com/sanh09/code-guide-protocol
 
-License: MIT. See [LICENSE](LICENSE).
+License: code (scripts and JSON files) under MIT, see [LICENSE](LICENSE); content (skill text, lessons, quizzes) under CC BY 4.0, see [LICENSE-CC-BY-4.0](LICENSE-CC-BY-4.0). Details and how to give credit: [NOTICE](NOTICE).

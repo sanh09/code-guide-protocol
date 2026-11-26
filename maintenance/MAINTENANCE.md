@@ -53,6 +53,7 @@
 - 교재·예시에 실제 자격 증명처럼 보이는 값을 쓰지 않는다. 토큰·키 예시는 `YOUR_API_KEY` 같은 가짜 값으로 쓰고, `$GITHUB_TOKEN`·`${MY_TOKEN}`처럼 사용자 환경의 자격 증명을 읽는 형태의 예시는 피한다(디렉터리 검사가 경고하고, 업데이트가 거절될 수 있다).
 - Anthropic 디렉터리 제출 요건을 지킨다: 각 플러그인 폴더에 `README.md`(코드 블록 제외 40단어 이상)와 `LICENSE`를 유지하고, 플러그인 폴더 안에 zip·pdf 같은 바이너리나 256KiB가 넘는 파일을 넣지 않는다. 플러그인 폴더 안의 내용을 바꾸면 반드시 `version`을 올린다(디렉터리가 `main`의 새 커밋을 새 버전으로 검사한다).
 - `bash -n install.sh`가 통과해야 한다.
+- 라이선스는 코드 MIT·내용 CC BY 4.0의 이중 라이선스다. 저장소 맨 위와 각 플러그인 폴더의 `LICENSE`(MIT), `LICENSE-CC-BY-4.0`, `NOTICE`를 지우거나 바꾸지 않고, plugin.json의 `"license": "MIT AND CC-BY-4.0"`과 SKILL.md의 `license` 항목을 유지한다. dist zip은 `scripts/build-dist.sh`로만 만든다(세 파일이 자동으로 들어간다). 공식 문서나 변경 내역의 문장을 그대로 옮기지 않고 한국어로 풀어 쓴다.
 
 ## 6. 기록하고 PR로 반영
 

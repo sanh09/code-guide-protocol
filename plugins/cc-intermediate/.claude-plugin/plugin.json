@@ -1,11 +1,11 @@
 {
   "name": "codeguide-intermediate",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Intermediate Claude Code tutor: good requests, the plan-mode workflow, git and PRs, permission rules, your own slash commands, session management, and claude -p, in the learner's language. Checks experience or Basics completion first. (Claude Code 중급 튜터)",
   "author": {
     "name": "sanh09"
   },
-  "license": "MIT",
+  "license": "MIT AND CC-BY-4.0",
   "homepage": "https://github.com/sanh09/code-guide-protocol/tree/main/plugins/cc-intermediate",
   "repository": "https://github.com/sanh09/code-guide-protocol",
   "keywords": [

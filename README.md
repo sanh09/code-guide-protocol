@@ -106,7 +106,8 @@ plugins/
   cc-intermediate/                  Intermediate
   cc-advanced/                      Advanced
     .claude-plugin/plugin.json
-    README.md, README.ko.md, LICENSE
+    README.md, README.ko.md
+    LICENSE, LICENSE-CC-BY-4.0, NOTICE  licenses (code MIT, content CC BY 4.0)
     skills/<name>/
       SKILL.md                         tutor rules
       references/curriculum.md         lessons, exercises, quiz bank
@@ -126,6 +127,10 @@ claude plugin eval . --allow-tools Write,Edit,Bash
 ```
 
 ## Release notes
+
+### 2026-11-26: Dual license (code MIT, content CC BY 4.0)
+- Code stays under MIT; the tutor content is now under CC BY 4.0. See [License](#license) and [`NOTICE`](NOTICE).
+- Each plugin folder now has `LICENSE`, `LICENSE-CC-BY-4.0` and `NOTICE`. Versions: `codeguide-basics` 0.5.2, `codeguide-intermediate` 0.4.2, `codeguide-advanced` 0.4.4. Nothing changes in how the tutors teach.
 
 ### 2026-11-25: `-ko` dropped from the names (action needed)
 - The plugins and skills are renamed: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. The tutors still reply in the learner's language.
@@ -184,4 +189,8 @@ The update procedure for Claude and Claude Code releases, and its records, are i
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE); each plugin folder also has its own copy.
+This project uses two licenses:
+- **Code** — shell scripts (`*.sh`) and JSON/YAML configuration files — is under the [MIT License](LICENSE). Code examples inside the lessons may also be used under MIT.
+- **Content** — `SKILL.md`, the reference files (lessons, facts, quizzes, answer keys), evals, READMEs, maintenance documents and images — is under [Creative Commons Attribution 4.0 (CC BY 4.0)](LICENSE-CC-BY-4.0).
+
+When you reuse the content, credit it like this: `code-guide-protocol by sanh09 (https://github.com/sanh09/code-guide-protocol), CC BY 4.0`. [`NOTICE`](NOTICE) has the details and the note on Anthropic trademarks. Each plugin folder has its own copy of all three files.
