@@ -52,8 +52,10 @@
 - `claude plugin validate .`가 code-guide-protocol, app-guide-plugin에서 통과해야 한다. (`claude`가 없으면 `npm i -g @anthropic-ai/claude-code`.) icon 경고는 무시한다.
 - 교재·예시에 실제 자격 증명처럼 보이는 값을 쓰지 않는다. 토큰·키 예시는 `YOUR_API_KEY` 같은 가짜 값으로 쓰고, `$GITHUB_TOKEN`·`${MY_TOKEN}`처럼 사용자 환경의 자격 증명을 읽는 형태의 예시는 피한다(디렉터리 검사가 경고하고, 업데이트가 거절될 수 있다).
 - Anthropic 디렉터리 제출 요건을 지킨다: 각 플러그인 폴더에 `README.md`(코드 블록 제외 40단어 이상)와 `LICENSE`를 유지하고, 플러그인 폴더 안에 zip·pdf 같은 바이너리나 256KiB가 넘는 파일을 넣지 않는다. 플러그인 폴더 안의 내용을 바꾸면 반드시 `version`을 올린다(디렉터리가 `main`의 새 커밋을 새 버전으로 검사한다).
+- 플러그인 폴더(`plugins/<스킬>/`) 안에는 Markdown(`.md`), 텍스트(`.txt`), JSON, YAML, PNG·JPEG·GIF·WebP·ICO 이미지 파일과 확장자 없는 `LICENSE`만 둔다. 그 밖의 확장자나 확장자 없는 파일, 스크립트(`#!`로 시작하는 파일), `CLAUDE.md`·`AGENTS.md`라는 이름의 파일, 패키지 목록 파일(`package-lock.json`, `requirements.txt` 등)을 넣으면 디렉터리가 그 버전을 거절한다(Verified 조직만 허용). 그래서 라이선스 파일 이름은 `LICENSE-CC-BY-4.0.txt`, `NOTICE.txt`다.
+- 교재에 사용자 컴퓨터의 자격 증명·설정 파일 경로를 그대로 적지 않는다. 특히 홈 폴더의 Claude Code 사용자 설정 파일(`.claude.json`)은 경로 대신 '홈 폴더의 Claude Code 사용자 설정 파일'처럼 풀어 쓴다. 디렉터리 검사가 MCP 설명 옆의 이런 경로를 '자격 증명을 읽어 서버로 보낼 수 있음'으로 판단해 버전을 거절한다. 공식 문서를 확인해 사실을 고칠 때도 이 표현을 유지한다.
 - `bash -n install.sh`가 통과해야 한다.
-- 라이선스는 코드 MIT·내용 CC BY 4.0의 이중 라이선스다. 저장소 맨 위와 각 플러그인 폴더의 `LICENSE`(MIT), `LICENSE-CC-BY-4.0`, `NOTICE`를 지우거나 바꾸지 않고, plugin.json의 `"license": "MIT AND CC-BY-4.0"`과 SKILL.md의 `license` 항목을 유지한다. dist zip은 `scripts/build-dist.sh`로만 만든다(세 파일이 자동으로 들어간다). 공식 문서나 변경 내역의 문장을 그대로 옮기지 않고 한국어로 풀어 쓴다.
+- 라이선스는 코드 MIT·내용 CC BY 4.0의 이중 라이선스다. 저장소 맨 위와 각 플러그인 폴더의 `LICENSE`(MIT), `LICENSE-CC-BY-4.0.txt`, `NOTICE.txt`를 지우거나 바꾸지 않고, plugin.json의 `"license": "MIT AND CC-BY-4.0"`과 SKILL.md의 `license` 항목을 유지한다. dist zip은 `scripts/build-dist.sh`로만 만든다(세 파일이 자동으로 들어간다). 공식 문서나 변경 내역의 문장을 그대로 옮기지 않고 한국어로 풀어 쓴다.
 
 ## 6. 기록하고 PR로 반영
 

@@ -2,6 +2,13 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-26 (디렉터리 정책 거절 수정)
+- 디렉터리가 codeguide-basics 0.5.2, codeguide-advanced 0.4.4를 거절함. 사유 1: 'Files outside the allowed list'. Verified가 아닌 조직은 Markdown·텍스트·JSON·YAML·이미지 파일만 낼 수 있는데, `LICENSE-CC-BY-4.0`은 확장자가 `.0`으로 읽힘. 저장소 3곳 맨 위와 플러그인 폴더 4곳에서 `LICENSE-CC-BY-4.0` → `LICENSE-CC-BY-4.0.txt`, `NOTICE` → `NOTICE.txt`로 이름을 바꾸고 README·SKILL.md·MAINTENANCE.md·`scripts/build-dist.sh`의 참조를 고침. 라이선스 내용은 그대로.
+- 사유 2(고급만): 'Uses a credential from the user's machine'(`MCP_FORWARDS_CREDENTIAL_ENV`). 검사가 MCP 범위 설명의 사용자 설정 파일 경로(홈 폴더의 `.claude.json`)를 자격 증명 파일을 읽는 것으로 판단함. cc-advanced·cc-advanced-app의 facts.md·curriculum.md에서 경로를 '홈 폴더의 Claude Code 사용자 설정 파일'로 풀어 쓰고, 예시 키를 `YOUR_API_KEY`로 통일.
+- MAINTENANCE.md 5절에 허용 파일 형식과 자격 증명 파일 경로 규칙 추가. dist zip 5개 다시 만듦.
+- 버전: codeguide-basics 0.5.3, codeguide-intermediate 0.4.3, codeguide-advanced 0.4.5, appguide-tutor 0.4.3.
+- 저장소: code-guide-protocol, guide-protocol, app-guide-plugin.
+
 ## 2026-11-26 (이중 라이선스·zip 라이선스 포함)
 - 라이선스를 코드 MIT·내용 CC BY 4.0의 이중 라이선스로 바꿈. 저장소 3곳 맨 위와 플러그인 폴더 4곳에 `LICENSE-CC-BY-4.0`(SPDX 원문)과 `NOTICE`(적용 범위·출처 표시 방법·Anthropic 상표 안내) 추가. `LICENSE`(MIT)는 그대로.
 - plugin.json `"license"`를 `"MIT AND CC-BY-4.0"`으로, SKILL.md 7개에 `license` 항목 추가.

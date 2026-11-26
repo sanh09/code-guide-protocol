@@ -108,7 +108,7 @@ plugins/
   cc-advanced/                      고급
     .claude-plugin/plugin.json
     README.md, README.ko.md
-    LICENSE, LICENSE-CC-BY-4.0, NOTICE  라이선스 (코드 MIT, 내용 CC BY 4.0)
+    LICENSE, LICENSE-CC-BY-4.0.txt, NOTICE.txt  라이선스 (코드 MIT, 내용 CC BY 4.0)
     skills/<이름>/
       SKILL.md                         튜터 규칙
       references/curriculum.md         레슨, 실습, 퀴즈 문제 은행
@@ -129,9 +129,14 @@ claude plugin eval . --allow-tools Write,Edit,Bash
 
 ## 업데이트 내역
 
+### 2026-11-26: 라이선스 파일 이름과 디렉터리용 표현 수정
+- 각 플러그인 폴더의 라이선스 파일 이름이 `LICENSE-CC-BY-4.0.txt`, `NOTICE.txt`로 바뀌었습니다(전에는 `LICENSE-CC-BY-4.0`, `NOTICE`). Anthropic 디렉터리는 Verified가 아닌 게시자에게서 Markdown·텍스트·JSON·YAML·이미지 파일만 받기 때문에 `.txt`를 붙였습니다. 라이선스 내용은 같습니다.
+- 고급 과정: MCP 범위 레슨에서 사용자 설정 파일의 경로를 그대로 적지 않고, 예시 키는 `YOUR_API_KEY`로 적습니다. 디렉터리 검사가 그 경로를 자격 증명 파일로 읽었기 때문입니다. 가르치는 내용은 바뀌지 않습니다.
+- 버전: `codeguide-basics` 0.5.3, `codeguide-intermediate` 0.4.3, `codeguide-advanced` 0.4.5.
+
 ### 2026-11-26: 이중 라이선스 (코드 MIT, 내용 CC BY 4.0)
-- 코드는 계속 MIT이고, 튜터 내용은 이제 CC BY 4.0입니다. 아래 [라이선스](#라이선스)와 [`NOTICE`](NOTICE)를 보세요.
-- 각 플러그인 폴더에 `LICENSE`, `LICENSE-CC-BY-4.0`, `NOTICE`가 들어갑니다. 버전: `codeguide-basics` 0.5.2, `codeguide-intermediate` 0.4.2, `codeguide-advanced` 0.4.4. 가르치는 내용은 바뀌지 않습니다.
+- 코드는 계속 MIT이고, 튜터 내용은 이제 CC BY 4.0입니다. 아래 [라이선스](#라이선스)와 [`NOTICE.txt`](NOTICE.txt)를 보세요.
+- 각 플러그인 폴더에 `LICENSE`, `LICENSE-CC-BY-4.0.txt`, `NOTICE.txt`가 들어갑니다. 버전: `codeguide-basics` 0.5.2, `codeguide-intermediate` 0.4.2, `codeguide-advanced` 0.4.4. 가르치는 내용은 바뀌지 않습니다.
 
 ### 2026-11-25: 이름에서 `-ko` 제거 (재설치 필요)
 - 플러그인과 스킬 이름을 바꿨습니다: `cc-basics-ko` → `cc-basics`, `cc-intermediate-ko` → `cc-intermediate`, `cc-advanced-ko` → `cc-advanced`. 학습자가 쓰는 언어로 답하는 것은 그대로입니다.
@@ -192,6 +197,6 @@ Claude·Claude Code 업데이트에 맞춘 갱신 절차와 기록은 [`maintena
 
 이 프로젝트는 라이선스 두 개를 씁니다.
 - **코드**: 셸 스크립트(`*.sh`)와 JSON·YAML 설정 파일은 [MIT 라이선스](LICENSE)입니다. 레슨 안의 코드 예시도 MIT로 쓸 수 있습니다.
-- **내용**: `SKILL.md`, 참고 파일(레슨, 사실, 퀴즈, 정답표), 평가(evals), README, 유지보수 문서, 이미지는 [크리에이티브 커먼즈 저작자표시 4.0(CC BY 4.0)](LICENSE-CC-BY-4.0)입니다.
+- **내용**: `SKILL.md`, 참고 파일(레슨, 사실, 퀴즈, 정답표), 평가(evals), README, 유지보수 문서, 이미지는 [크리에이티브 커먼즈 저작자표시 4.0(CC BY 4.0)](LICENSE-CC-BY-4.0.txt)입니다.
 
-내용을 다시 쓸 때는 이렇게 출처를 밝혀 주세요: `code-guide-protocol by sanh09 (https://github.com/sanh09/code-guide-protocol), CC BY 4.0`. 자세한 범위와 Anthropic 상표 안내는 [`NOTICE`](NOTICE)에 있습니다. 각 플러그인 폴더에도 세 파일이 모두 있습니다.
+내용을 다시 쓸 때는 이렇게 출처를 밝혀 주세요: `code-guide-protocol by sanh09 (https://github.com/sanh09/code-guide-protocol), CC BY 4.0`. 자세한 범위와 Anthropic 상표 안내는 [`NOTICE.txt`](NOTICE.txt)에 있습니다. 각 플러그인 폴더에도 세 파일이 모두 있습니다.
