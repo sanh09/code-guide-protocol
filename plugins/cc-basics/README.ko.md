@@ -44,4 +44,4 @@ Claude Code에서:
 
 소스, 업데이트 내역, 다른 과정: https://github.com/sanh09/code-guide-protocol
 
-라이선스: MIT. [LICENSE](LICENSE)를 보세요.
+라이선스: 코드(스크립트·JSON 파일)는 MIT([LICENSE](LICENSE)), 내용(스킬 문서·레슨·퀴즈)은 CC BY 4.0([LICENSE-CC-BY-4.0](LICENSE-CC-BY-4.0))입니다. 자세한 범위와 출처 표시 방법은 [NOTICE](NOTICE)를 보세요.

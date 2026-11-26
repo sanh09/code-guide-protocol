@@ -2,6 +2,14 @@
 
 최신 항목이 위에 옵니다. 각 항목: 날짜 · 확인한 버전 · 바꾼 내용 · 바꾼 저장소.
 
+## 2026-11-26 (이중 라이선스·zip 라이선스 포함)
+- 라이선스를 코드 MIT·내용 CC BY 4.0의 이중 라이선스로 바꿈. 저장소 3곳 맨 위와 플러그인 폴더 4곳에 `LICENSE-CC-BY-4.0`(SPDX 원문)과 `NOTICE`(적용 범위·출처 표시 방법·Anthropic 상표 안내) 추가. `LICENSE`(MIT)는 그대로.
+- plugin.json `"license"`를 `"MIT AND CC-BY-4.0"`으로, SKILL.md 7개에 `license` 항목 추가.
+- `scripts/build-dist.sh`(guide-protocol, app-guide-plugin): 모든 zip에 `LICENSE`, `LICENSE-CC-BY-4.0`, `NOTICE`를 넣도록 고침(폴더에 없으면 저장소 맨 위 파일을 넣음). 중첩된 `evals/`도 계속 뺌. dist zip 5개 다시 만듦.
+- README(영어·한국어) 라이선스 항목, 구조, 업데이트 내역 고침. MAINTENANCE.md에 라이선스 규칙 추가.
+- 버전: codeguide-basics 0.5.2, codeguide-intermediate 0.4.2, codeguide-advanced 0.4.4, appguide-tutor 0.4.2.
+- 저장소: code-guide-protocol, guide-protocol, app-guide-plugin.
+
 ## 2026-11-25 (자격 증명 예시 표현)
 - 디렉터리 검사가 고급 과정의 토큰 예시(`${MY_TOKEN}`, `Bearer your-token`)를 '사용자 컴퓨터의 자격 증명 사용'으로 경고함. 가르치는 내용은 그대로 두고 표현만 바꿈: 퀴즈 L2-4 보기와 정답표 → '`${...}` 형식으로 환경 변수를 참조', 헤더 예시 → `Bearer YOUR_API_KEY`. codeguide-advanced 0.4.3.
 - 저장소: code-guide-protocol, guide-protocol.
